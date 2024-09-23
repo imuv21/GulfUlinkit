@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --font: 'Roboto', sans-serif;
+    --infont: 12px;
+
+    --codeOne: black;
+    --codeTwo: gray;
+    --codeThree: white;
+
+    --bg: radial-gradient(circle at 20% 0%, rgba(49, 210, 255, 0.30) 1%, transparent 40%), radial-gradient(circle at 80% 0%, rgba(49, 210, 255, 0.30) 1%, transparent 40%);
+    --trans: all 0.4s ease-in-out;
+    --br: 3px;
+    --br2: 10px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border-radius: 0px;
+    font-family: var(--font);
+    font-size: var(--infont);
+    text-transform: capitalize;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    border: none;
+}
+
+body {
+    background: var(--codeThree);
+}
+
+a {
+    cursor: pointer;
+    color: var(--codeOne);
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    color: var(--codeOne);
+}
+
+select,
+textarea,
+input {
+    padding: 10px;
+    border-radius: var(--br);
+    width: 100%;
+    border: 1px solid var(--codeOne);
+    color: var(--codeOne);
+}
+
+textarea,
+input::placeholder {
+    color: var(--codeTwo);
+}
+
+input,
+select,
+textarea:focus {
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+select::-webkit-scrollbar {
+    width: 15px;
+}
+
+select::-webkit-scrollbar-thumb {
+    background-color: var(--codeTwo);
+    border-radius: var(--br2);
+}
+
+button {
+    width: fit-content;
+    cursor: pointer;
+    transition: var(--trans);
+    display: flex;
+    padding: 10px 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: var(--br);
+    background: var(--codeTwo);
+    color: var(--codeThree);
+    border: 1px solid var(--codeOne);
+}
+
+button:hover {
+    background: var(--codeThree);
+    color: var(--codeOne);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* flex */
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexcol {
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.start {
+    align-items: start;
+    justify-content: start;
+}
+
+.end {
+    align-items: end;
+    justify-content: end;
+}
+
+.center-start {
+    align-items: center;
+    justify-content: start;
+}
+
+.start-center {
+    align-items: start;
+    justify-content: center;
+}
+
+.end-start {
+    align-items: end;
+    justify-content: start;
+}
+
+.start-end {
+    align-items: start;
+    justify-content: end;
+}
+
+.center-end {
+    align-items: center;
+    justify-content: end;
+}
+
+.end-center {
+    align-items: end;
+    justify-content: center;
+}
+
+.center-space {
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ////////////// General styling ////////////// */
+
+.wh {
+    width: 100%;
+}
+
+.relative {
+    position: relative;
+}
+
+.point {
+    cursor: pointer;
+}
+
+.hover {
+    cursor: pointer;
+    opacity: 1;
+    transition: var(--trans);
+}
+
+.hover:hover {
+    opacity: 0.6;
+}
+
+/* gaps */
+
+.g5 {
+    gap: 5px;
+}
+
+.g10 {
+    gap: 10px;
+}
+
+.g15 {
+    gap: 15px;
+}
+
+.g20 {
+    gap: 20px;
+}
+
+/* outlines */
+
+.outline1 {
+    outline: 1px solid blue;
+}
+
+.outline2 {
+    outline: 1px solid limegreen;
+}
+
+.outline3 {
+    outline: 1px solid orange;
+}
+
+/* fonts */
+
+.headingBig {
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.heading {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.headingSmol {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.textBig {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.text {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.textSmol {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+/* ui */
+
+.page {
+    width: 100%;
+    padding: 60px 100px;
+    gap: 20px;
+}
+
+.box10 {
+    width: 100%;
+    gap: 10px;
+}
+
+.box15 {
+    width: 100%;
+    gap: 15px;
+}
+
+.box20px {
+    width: 100%;
+    gap: 20px;
+}
+
+/* components styling */
+
+.header {
+    width: 100%;
+    padding: 10px 100px;
+}
+
+/* pages styling */
+/* imuv21 */
+
+
+/* vipin */
