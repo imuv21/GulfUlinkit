@@ -12,7 +12,7 @@ const Home = () => {
         <link rel="canonical" href="" />
       </Helmet>
 
-      <div className='page'>
+      <div className='page' style={{height: '200vh'}}>
         home page
       </div>
     </Fragment>

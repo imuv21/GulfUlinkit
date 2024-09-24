@@ -5,7 +5,7 @@ const Footer = () => {
 
   return (
     <Fragment>
-      <div className='header'>
+      <div className='footer'>
         footer
       </div>
     </Fragment>

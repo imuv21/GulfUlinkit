@@ -270,6 +270,7 @@ button:focus {
     width: 100%;
     padding: 60px 100px;
     gap: 20px;
+    background-color: var(--codeTwo);
 }
 
 .box10 {
@@ -289,9 +290,11 @@ button:focus {
 
 /* components styling */
 
-.header {
+.footer {
     width: 100%;
     padding: 10px 100px;
+    height: 200px;
+    background-color: var(--codeOne);
 }
 
 /* pages styling */
@@ -299,3 +302,17 @@ button:focus {
 
 
 /* vipin */
+
+
+
+
+/* responsiveness */
+@media only screen and (max-width: 850px) {
+    .page {
+        padding: 30px 15px;
+        gap: 10px;
+    }
+    .footer {
+        padding: 10px 15px;
+    }
+}
