@@ -38,6 +38,12 @@
     &.on-scroll {
         background: var(--codeThree);
         box-shadow: var(--shadow-medium);
+
+        .menu {
+            &-link {
+                color: black;
+            }
+        }
     }
 }
 
@@ -54,8 +60,9 @@
     font-family: var(--font);
     font-size: 40px;
     font-weight: 600;
-    color: yellowgreen;
+    color: var(--codeFour);
     text-transform: capitalize;
+    filter: drop-shadow(2px 2px 2px var(--codeOne));
 }
 
 .menu {
@@ -86,12 +93,16 @@
 
     &-link {
         font-family: var(--font);
-        font-size: 1rem;
+        font-size: 13px;
         font-weight: 500;
         line-height: 1.5;
-        color: black;
+        color: white;
         text-transform: uppercase;
         transition: all 0.3s ease;
+
+        &.on-scroll {
+            color: black; 
+        }
     }
 
     &-block {
@@ -100,15 +111,16 @@
         justify-content: center;
         font-family: var(--font);
         font-size: 14px;
-        font-weight: 600;
+        font-weight: 500;
         white-space: nowrap;
         border-radius: 4px;
         padding: 10px 15px;
         text-transform: capitalize;
-        color: var(--codeOne);
-        background-color: rgb(0, 166, 255);
+        color: var(--codeThree);
+        background-color: var(--codeFour);
         box-shadow: var(--shadow-medium);
         transition: all 0.3s ease-in-out;
+        filter: drop-shadow(2px 2px 2px var(--codeOne));
     }
 
     // Media Query Breakpoint
