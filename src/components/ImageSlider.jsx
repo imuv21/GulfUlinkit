@@ -105,8 +105,6 @@ const ImageSlider = () => {
                 })(jQuery);
 
                 $(slider1Ref.current).sliderResponsive({
-                    fadeSpeed: 900,
-                    slidePause: 4000,
                     hideDots: "on",
                 });
             };
@@ -132,20 +130,24 @@ const ImageSlider = () => {
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
             </Helmet>
 
-            <div className="slider" id="slider1" ref={slider1Ref} style={{clipPath: `polygon(100% 0, 100% 89%, 61% 100%, 0 81%, 0 0)`}} >
+            <div className="slider" id="slider1" ref={slider1Ref}>
                 <div style={{ backgroundImage: `url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/1200_110627-8240-Myst.jpg)` }}></div>
                 <div style={{ backgroundImage: `url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/Gif-pont-lueur-600.gif)` }}></div>
                 <div style={{ backgroundImage: `url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/1200_Sharpened-version.jpg)` }}></div>
                 <div style={{ backgroundImage: `url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/jungle.jpg)` }}></div>
                 <div style={{ backgroundImage: `url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/1200_bodie-11.jpg)` }}></div>
-                <i className="left" style={{ zIndex: 2, position: 'absolute' }}>
+                <i className="left" style={{ zIndex: 3, position: 'absolute' }}>
                     <KeyboardArrowLeftIcon />
                 </i>
-                <i className="right" style={{ zIndex: 2, position: 'absolute' }}>
+                <i className="right" style={{ zIndex: 3, position: 'absolute' }}>
                     <KeyboardArrowRightIcon />
                 </i>
+
                 <span class="titleBar">
-                    <h1>This Slider has all default settings.</h1>
+                   <h1>Build or Scale Up Your</h1>
+                   <h1>Business With Us</h1>
+                   <p>If You Can Think It, We Can Make It</p>
+                   <button>Discover More</button>
                 </span>
             </div>
         </Fragment>

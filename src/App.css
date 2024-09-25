@@ -3,16 +3,19 @@
 :root {
     --font: 'Roboto', sans-serif;
     --infont: 12px;
+    --br: 3px;
+    --brTwo: 10px;
 
-    --codeOne: black;
-    --codeTwo: gray;
-    --codeThree: white;
+    --codeOne: #000000;
+    --codeTwo: #9e9e9e;
+    --codeSix: #e8e8e8;
+    --codeThree: #ffffff;
     --codeFour: #0066ff;
+    --codeFive: #00b3ff;
 
     --bg: radial-gradient(circle at 20% 0%, rgba(49, 210, 255, 0.30) 1%, transparent 40%), radial-gradient(circle at 80% 0%, rgba(49, 210, 255, 0.30) 1%, transparent 40%);
+    --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --trans: all 0.4s ease-in-out;
-    --br: 3px;
-    --br2: 10px;
 }
 
 * {
@@ -87,7 +90,7 @@ select::-webkit-scrollbar {
 
 select::-webkit-scrollbar-thumb {
     background-color: var(--codeTwo);
-    border-radius: var(--br2);
+    border-radius: var(--brTwo);
 }
 
 button {
@@ -95,19 +98,20 @@ button {
     cursor: pointer;
     transition: var(--trans);
     display: flex;
-    padding: 10px 30px;
+    padding: 10px 15px;
     align-items: center;
     justify-content: center;
     text-align: center;
     border-radius: var(--br);
-    background: var(--codeTwo);
+    background: var(--codeFour);
     color: var(--codeThree);
-    border: 1px solid var(--codeOne);
+    border: 1px solid var(--codeFour);
+    font-size: 13px;
 }
 
 button:hover {
     background: var(--codeThree);
-    color: var(--codeOne);
+    color: var(--codeFour);
 }
 
 button:focus {
@@ -251,7 +255,8 @@ button:focus {
 }
 
 .textBig {
-    font-size: 14px;
+    font-size: 18px;
+    line-height: 25px;
     font-weight: 400;
 }
 
@@ -289,7 +294,64 @@ button:focus {
     gap: 20px;
 }
 
+
+
 /* components styling */
+/* header */
+.main-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 50px;
+    border-bottom: none !important;
+}
+
+.hover-div {
+    width: 170px;
+    background-color: var(--codeThree);
+    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.1),
+        /* Bottom shadow */
+        -4px 0px 6px -2px rgba(0, 0, 0, 0.1),
+        /* Left shadow */
+        4px 0px 6px -2px rgba(0, 0, 0, 0.1);
+    /* Right shadow */
+    color: var(--codeOne);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    padding: 10px;
+    top: 49px;
+    left: 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+    border-radius: var(--br);
+}
+
+.hover-div.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.hover-div p {
+    width: 100%;
+    padding: 5px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border-bottom: 1px solid var(--codeSix);
+    transition: var(--trans);
+}
+
+.hover-div p:hover {
+    color: var(--codeFive);
+}
+
 /* footer */
 .footer {
     width: 100%;
@@ -298,10 +360,13 @@ button:focus {
     background-color: var(--codeOne);
 }
 
-/* image slider */
+/* home page image slider */
+.slider {
+    clip-path: polygon(100% 0, 100% 89%, 61% 100%, 0 81%, 0 0);
+}
+
 .slider,
 .slider>div {
-    /* Images default to Center Center. Maybe try 'center top'? */
     background-position: center center;
     display: block;
     width: 100%;
@@ -309,7 +374,7 @@ button:focus {
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: #000;
+    background-color: var(--codeOne);
     overflow: hidden;
     -moz-transition: transform .4s;
     -o-transition: transform .4s;
@@ -319,6 +384,7 @@ button:focus {
 
 .slider>div {
     position: absolute;
+    filter: brightness(0.4);
 }
 
 .slider>i {
@@ -440,30 +506,40 @@ button:focus {
 
 .titleBar {
     z-index: 2;
-    display: inline-block;
-    background: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    background: transparent;
     position: absolute;
     width: 100%;
-    bottom: 0;
-    transform: translateY(100%);
-    padding: 20px 30px;
-    transition: .3s;
+    top: 30%;
+    padding: 20px 100px;
+    gap: 10px;
 }
 
 .titleBar * {
-    transform: translate(-20px, 30px);
+    transform: translate(0);
     transition: all 700ms cubic-bezier(0.37, 0.31, 0.2, 0.85) 200ms;
-    opacity: 0;
+    opacity: 1;
+}
+
+.titleBar h1 {
+    color: var(--codeThree);
+    font-size: 45px;
+}
+
+.titleBar p {
+    color: var(--codeThree);
+    font-size: 20px;
+}
+
+.titleBar button {
+    margin-top: 20px;
 }
 
 .titleBarTop .titleBar * {
     transform: translate(-20px, -30px);
-}
-
-.slider:hover .titleBar,
-.slider:hover .titleBar * {
-    transform: translate(0);
-    opacity: 1;
 }
 
 .titleBarTop .titleBar {
@@ -471,13 +547,6 @@ button:focus {
     bottom: initial;
     transform: translateY(-100%);
 }
-
-.titleBar h1{
-    color: white;
-    font-size: 20px;
-}
-
-
 
 @keyframes boing {
     0% {
@@ -504,6 +573,64 @@ button:focus {
 
 /* pages styling */
 /* imuv21 */
+
+/* intersection observer */
+.hiOne {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 1s;
+    visibility: hidden;
+}
+
+.siOne {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    visibility: visible; 
+}
+
+.delayOne:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.delayOne:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.delayOne:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+/* home styling */
+.secOne {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;
+    padding: 10px; 
+}
+.subsecOne{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+}
+.subsecTwo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
 
 
 /* vipin */

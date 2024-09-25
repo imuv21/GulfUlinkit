@@ -1,8 +1,11 @@
-import React, { useEffect, Fragment } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import EastIcon from '@mui/icons-material/East';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import './Header.scss';
 
 const Header = () => {
+
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     const navbarMenu = document.getElementById("menu");
@@ -56,7 +59,7 @@ const Header = () => {
     <Fragment>
       <header className="header" id="header">
         <nav className="navbar container">
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'row', gap: '15px'}}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'row', gap: '15px' }}>
             <div className="burger" id="burger">
               <span className="burger-line"></span>
               <span className="burger-line"></span>
@@ -68,13 +71,28 @@ const Header = () => {
           <div className="menu" id="menu">
             <ul className="menu-inner">
               <li className="menu-item"><a href="/" className="menu-link">Home</a></li>
+              <li className="menu-item"><a href="/products" className="menu-link">Portfolio</a></li>
+
+              <li className="menu-item">
+                <a href="/search" className="menu-link main-div" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+                  Services <KeyboardArrowDownIcon  />
+                  <div className={`hover-div ${isHovered ? 'visible' : ''}`}>
+                    <p className='text'>Web Development</p>
+                    <p className='text'>App Development</p>
+                    <p className='text'>Designing</p>
+                    <p className='text'>SEO</p>
+                    <p className='text'>Digital Marketing</p>
+                    <p className='text'>Brandings</p>
+                  </div>
+                </a>
+              </li>
+              
               <li className="menu-item"><a href="/products" className="menu-link">About us</a></li>
               <li className="menu-item"><a href="#" className="menu-link">Contact us</a></li>
-              <li className="menu-item"><a href="#" className="menu-link">Blog</a></li>
-              <li className="menu-item"><a href="/search" className="menu-link">Services</a></li>
+              <li className="menu-item"><a href="#" className="menu-link">Blogs</a></li>
             </ul>
           </div>
-          <a href="/login" className="menu-block">Register Now &nbsp;&nbsp; <EastIcon /></a>
+          <a href="/login" className="menu-block">Book An Appointment &nbsp;&nbsp; <EastIcon /></a>
         </nav>
       </header>
     </Fragment>
