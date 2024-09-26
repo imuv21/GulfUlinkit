@@ -87,8 +87,8 @@ const Home = () => {
 
       <div className='page flexcol'>
 
-        <section className="secOne">
-          <article className="hiOneRev delayOne subsecOne" ref={(el) => (hiOneRef.current[0] = el)}>
+        <section className="secOne outline2">
+          <article className="hiOneRev delayOne subsecOne outline1" ref={(el) => (hiOneRef.current[0] = el)}>
             <p className='heading'>WE ARE A CREATIVE AGENCY</p>
             <h1 className='headingBig'>If You Can Think It, We Can Make It</h1>
             <h2 className='textBig'>
@@ -99,7 +99,7 @@ const Home = () => {
             </h2>
             <button>Book Free Consultation</button>
           </article>
-          <section className='subsecTwo'>
+          <section className='subsecTwo outline3'>
             <section className="hiOne delayOne ssubsec" ref={(el) => (hiOneRef.current[1] = el)}>
               <article>
                 <TuneIcon />
