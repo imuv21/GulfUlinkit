@@ -681,6 +681,7 @@ button:focus {
     align-items: start;
     justify-content: center;
     gap: 15px;
+    padding-bottom: 5px;
 }
 
 .subsecOne button {
