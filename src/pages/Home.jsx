@@ -68,6 +68,7 @@ const Home = () => {
       );
       if (currentStep >= totalSteps) {
         clearInterval(timer);
+        setCounts(ends);
       }
     }, intervalTime);
     return () => clearInterval(timer);

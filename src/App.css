@@ -684,7 +684,6 @@ button:focus {
 }
 
 .subsecOne button {
-    margin-top: 20px;
     color: var(--codeFour);
     font-size: 18px;
     border-radius: var(--br);
