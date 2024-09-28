@@ -9,6 +9,8 @@ const Layout = lazy(() => import('./components/Layout'));
 const Home = lazy(() => import('./pages/Home'));
 const AboutUs = lazy(() => import('./pages/AboutUs'));
 const ContactUs = lazy(() => import('./pages/ContactUs'));
+const Portfolio = lazy(() => import('./pages/Portfolio'));
+const Blogs = lazy(() => import('./pages/Blogs'));
 
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/about-us' element={<AboutUs />} />
             <Route path='/contact-us' element={<ContactUs />} />
+            <Route path='/portfolio' element={<Portfolio />} />
+            <Route path='/blogs' element={<Blogs/>} />
 
             {/* not found */}
             <Route path='*' element={<div className='page flex center'>Path does not exist!</div>} />

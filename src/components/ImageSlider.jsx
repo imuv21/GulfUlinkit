@@ -8,7 +8,6 @@ const ImageSlider = () => {
     const slider1Ref = useRef(null);
 
     useEffect(() => {
-
         const initializeSliders = () => {
             if (typeof jQuery !== 'undefined') {
                 (function ($) {
@@ -109,19 +108,16 @@ const ImageSlider = () => {
                 });
             };
         };
-
         const script = document.createElement('script');
         script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js';
         script.onload = initializeSliders;
         document.body.appendChild(script);
-
         return () => {
             if (typeof jQuery !== 'undefined' && slider1Ref.current) {
                 $(slider1Ref.current).empty();
             }
             document.body.removeChild(script);
         };
-
     }, []);
 
     return (

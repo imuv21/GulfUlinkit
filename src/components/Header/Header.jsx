@@ -71,7 +71,7 @@ const Header = () => {
           <div className="menu" id="menu">
             <ul className="menu-inner">
               <li className="menu-item"><a href="/" className="menu-link">Home</a></li>
-              <li className="menu-item"><a href="/products" className="menu-link">Portfolio</a></li>
+              <li className="menu-item"><a href="/portfolio" className="menu-link">Portfolio</a></li>
 
               <li className="menu-item">
                 <a href="/search" className="menu-link main-div" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
@@ -88,8 +88,8 @@ const Header = () => {
               </li>
               
               <li className="menu-item"><a href="/about-us" className="menu-link">About us</a></li>
-              <li className="menu-item"><a href="#" className="menu-link">Contact us</a></li>
-              <li className="menu-item"><a href="#" className="menu-link">Blogs</a></li>
+              <li className="menu-item"><a href="/contact-us" className="menu-link">Contact us</a></li>
+              <li className="menu-item"><a href="/blogs" className="menu-link">Blogs</a></li>
             </ul>
           </div>
           <a href="/login" className="menu-block">Book An Appointment &nbsp;&nbsp; <EastIcon /></a>

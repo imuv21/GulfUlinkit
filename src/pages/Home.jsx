@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef, Fragment } from 'react';
+import React, { useState, useEffect, useRef, Fragment, lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
-import ImageSlider from '../components/ImageSlider';
 import TuneIcon from '@mui/icons-material/Tune';
 import CodeIcon from '@mui/icons-material/Code';
 import HubIcon from '@mui/icons-material/Hub';
@@ -12,6 +11,11 @@ import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 
+const Coverflow = lazy(() => import('../components/Coverflow/Coverflow'));
+const Gallery = lazy(() => import('../components/Gallery'));
+const ImageSlider = lazy(() => import('../components/ImageSlider'));
+const Blog = lazy(() => import('../components/Blog'));
+
 
 const Home = () => {
 
@@ -22,6 +26,8 @@ const Home = () => {
   const ends = [5, 20, 3, 100, 50, 29];
   const duration = 2000;
   const numberRef = useRef(null);
+
+  const divs = 3;
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -57,8 +63,8 @@ const Home = () => {
 
     setCounts([0, 0, 0, 0, 0, 0]);
     const totalSteps = 100;
-    const intervalTime = duration / totalSteps; 
-    const increments = ends.map((end) => end / totalSteps); 
+    const intervalTime = duration / totalSteps;
+    const increments = ends.map((end) => end / totalSteps);
     let currentStep = 0;
 
     const timer = setInterval(() => {
@@ -83,7 +89,9 @@ const Home = () => {
         <link rel="canonical" href="" />
       </Helmet>
 
-      <ImageSlider />
+      <Suspense fallback={<p>Loading...</p>}>
+        <ImageSlider />
+      </Suspense>
 
       <div className='page flexcol'>
 
@@ -201,6 +209,29 @@ const Home = () => {
             <p className='textBig'>Industries Served</p>
           </div>
         </div>
+
+        <article className='flexcol center wh g10'>
+          <h1 className='headingBig wh flex center'>Our Case Studies</h1>
+          <h2 className='text wh flex center'>View some of our work and case studies for clients. We will work to deliver that strategy by building out your existing campaigns, or establishing accounts at new networks.</h2>
+        </article>
+
+        <Suspense fallback={<p>Loading...</p>}>
+          <Gallery />
+        </Suspense>
+
+        <article>
+          <h1 className='headingBig wh flex center'>Our Blogs</h1>
+        </article>
+
+        <div className="blogrid">
+          {Array.from({ length: divs }).map((_, index) => (
+            <Blog key={index} />
+          ))}
+        </div>
+        
+        <Suspense fallback={<p>Loading...</p>}>
+          <Coverflow />
+        </Suspense>
 
       </div>
     </Fragment>
