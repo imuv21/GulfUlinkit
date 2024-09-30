@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, Fragment, lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useNavigate } from 'react-router-dom';
 import TuneIcon from '@mui/icons-material/Tune';
 import CodeIcon from '@mui/icons-material/Code';
 import HubIcon from '@mui/icons-material/Hub';
@@ -11,11 +12,11 @@ import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 
+
 const Coverflow = lazy(() => import('../components/Coverflow/Coverflow'));
 const Gallery = lazy(() => import('../components/Gallery'));
 const ImageSlider = lazy(() => import('../components/ImageSlider'));
 const Blog = lazy(() => import('../components/Blog'));
-
 
 const Home = () => {
 
@@ -28,6 +29,11 @@ const Home = () => {
   const numberRef = useRef(null);
 
   const divs = 3;
+  const navigate = useNavigate();
+
+  const contactUs = () => {
+    navigate('/contact-us');
+  }
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -105,7 +111,7 @@ const Home = () => {
               From stunning web designs that captivate users to digital marketing campaigns that resonate and engage, Alayra Tech is dedicated to excellence in all we do. Our mission is to help your business stand out in the digital landscape, combining aesthetic appeal with functional design to achieve your goals.
               Let your imagination run wild, and trust Alayra Tech to bring your vision to life. Together, we can create something extraordinary.
             </h2>
-            <button>Book Free Consultation</button>
+            <button onClick={contactUs}>Book Free Consultation</button>
           </article>
           <section className='subsecTwo'>
             <section className="hiOne delayOne ssubsec" ref={(el) => (hiOneRef.current[1] = el)}>

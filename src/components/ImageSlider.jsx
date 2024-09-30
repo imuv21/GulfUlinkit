@@ -1,11 +1,17 @@
 import React, { Fragment, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useNavigate } from 'react-router-dom';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+
 
 const ImageSlider = () => {
 
     const slider1Ref = useRef(null);
+    const navigate = useNavigate();
+    const blogs = () => {
+        navigate('/blogs');
+    }
 
     useEffect(() => {
         const initializeSliders = () => {
@@ -143,7 +149,7 @@ const ImageSlider = () => {
                    <h1>Build or Scale Up Your</h1>
                    <h1>Business With Us</h1>
                    <p>If You Can Think It, We Can Make It</p>
-                   <button>Discover More</button>
+                   <button onClick={blogs}>Discover More</button>
                 </span>
             </div>
         </Fragment>
