@@ -20,7 +20,7 @@ const Blogs = () => {
                 <ImageComponent heading={'Blogs'} imglink={'https://kindful.com/wp-content/uploads/How-To-Write-An-Effective-Peer-To-Peer-Fundraising-Email.jpg'} text={'We love turning raw ideas into robust and bespoke creations. We believe in doing things right while keeping it simple and minimalist to attract more eyeballs.'} />
             </Suspense>
 
-            <div className='page'>
+            <div className='page flexcol'>
                 <div className="blogrid">
                     {Array.from({ length: divs }).map((_, index) => (
                         <Blog key={index} />
