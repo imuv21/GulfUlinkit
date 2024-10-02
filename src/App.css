@@ -269,6 +269,7 @@ button:focus {
     font-size: 18px;
     line-height: 30px;
     font-weight: 400;
+    letter-spacing: 0.1rem;
     color: var(--codeSeven);
 }
 
@@ -276,12 +277,15 @@ button:focus {
     font-size: 15px;
     line-height: 20px;
     font-weight: 400;
+    letter-spacing: 0.1rem;
     color: var(--codeSeven);
 }
 
 .textSmol {
     font-size: 13px;
+    line-height: 18px;
     font-weight: 400;
+    letter-spacing: 0.1rem;
     color: var(--codeSeven);
 }
 
