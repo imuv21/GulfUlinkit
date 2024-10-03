@@ -74,7 +74,7 @@ const Header = () => {
               <li className="menu-item"><a href="/portfolio" className="menu-link">Portfolio</a></li>
 
               <li className="menu-item">
-                <a href="/search" className="menu-link main-div" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+                <a href="/services" className="menu-link main-div" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                   Services <KeyboardArrowDownIcon  />
                   <div className={`hover-div ${isHovered ? 'visible' : ''}`}>
                     <p className='text'>Web Development</p>

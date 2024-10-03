@@ -373,6 +373,13 @@ button:focus {
     background-color: var(--codeSix);
 }
 
+.some-content {
+    padding-top: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
 .footer-flex {
     display: flex;
     justify-content: space-between;
@@ -399,10 +406,6 @@ button:focus {
     cursor: pointer;
 }
 
-.footer-services:hover {
-    opacity: 0.7;
-    background-color: aliceblue;
-}
 
 .footer-container-3 {
     border-top: 1px solid #b3b1b1;
@@ -1055,7 +1058,7 @@ button:focus {
 }
 
 /* contact us page  */
-.contact{
+.contact {
     width: 100%;
     gap: 10px;
     display: flex;
@@ -1063,13 +1066,15 @@ button:focus {
     justify-content: center;
     flex-direction: column;
 }
-.subcontact{
+
+.subcontact {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.subcontact article{
+
+.subcontact article {
     width: 100%;
     padding: 30px 30px 30px 100px;
     gap: 30px;
@@ -1077,12 +1082,14 @@ button:focus {
     align-items: center;
     justify-content: center;
 }
-.subcontact article .MuiSvgIcon-root{
+
+.subcontact article .MuiSvgIcon-root {
     width: 60px;
     height: 60px;
     color: var(--codeFour);
 }
-.subcontact article div{
+
+.subcontact article div {
     width: 100%;
     gap: 10px;
     display: flex;
@@ -1099,7 +1106,8 @@ button:focus {
     align-items: center;
     justify-content: center;
 }
-.git article{
+
+.git article {
     width: 100%;
     padding: 30px 0px;
     gap: 10px;
@@ -1108,12 +1116,14 @@ button:focus {
     justify-content: start;
     flex-direction: column;
 }
-.git article .MuiSvgIcon-root{
+
+.git article .MuiSvgIcon-root {
     width: 20px;
     height: 20px;
     color: var(--codeFour);
 }
-.stylisharticle{
+
+.stylisharticle {
     background-color: rgb(219, 219, 219);
     width: 100%;
     border-radius: 15px;
@@ -1153,9 +1163,9 @@ button:focus {
 .info-content {
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: start;
     gap: 40px;
-    padding-top: 80px;
 }
 
 .it-con {
@@ -1365,6 +1375,35 @@ button:focus {
     color: var(--codeFour);
 
 }
+
+.services-padding {
+    padding: 0px 100px;
+}
+
+.services {
+    width: 100%;
+    background-color: var(--codeFour);
+    padding: 0px 100px;
+
+}
+
+.hd-2 {
+    color: var(--codeOne);
+}
+
+.para-3 {
+    color: #fff;
+}
+
+.btna2 {
+    background-color: black;
+}
+
+.design {
+    width: 700px;
+}
+
+
 
 /* responsiveness */
 @media only screen and (max-width: 850px) {
