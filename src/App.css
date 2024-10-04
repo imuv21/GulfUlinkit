@@ -352,7 +352,7 @@ button:focus {
     pointer-events: auto;
 }
 
-.hover-div p {
+.hover-div a {
     width: 100%;
     padding: 5px 0px;
     display: flex;
@@ -362,7 +362,7 @@ button:focus {
     transition: var(--trans);
 }
 
-.hover-div p:hover {
+.hover-div a:hover {
     color: var(--codeFive);
 }
 
@@ -1135,6 +1135,391 @@ button:focus {
     flex-direction: column;
 }
 
+/* top component  */
+.top-component {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    background-color: var(--codeEight);
+    padding: 60px 100px;
+    gap: 50px;
+    color: var(--codeThree);
+}
+
+.image-overlay {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+    aspect-ratio: 4/3;
+}
+
+.top-overlay {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.top-overlay h1 {
+    color: var(--codeThree);
+    font-size: 42px;
+}
+
+.top-overlay p {
+    color: var(--codeThree);
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.hirecont {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 100px 0px 100px;
+    gap: 40px;
+    margin: 0px auto;
+}
+
+.hireone {
+    width: 100%;
+    min-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    gap: 10px;
+    background-image: linear-gradient(114deg, #f13c31 62%, #F8BB7B 100%);
+    border-radius: 15px;
+}
+
+.hireone div {
+    color: var(--codeThree);
+}
+
+.hiretwo {
+    width: 100%;
+    min-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+
+/* bottom component  */
+.bottom-component {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--codeSix);
+    padding: 40px 100px;
+    gap: 40px;
+}
+
+.fact-grid {
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    overflow: hidden;
+}
+
+.fact-grid article {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    border-radius: var(--br);
+    border: 1px solid var(--codeTwo);
+}
+
+.fact-grid article .textBig {
+    text-align: center;
+}
+
+.brands {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 100px 60px 100px;
+    gap: 40px;
+}
+
+
+/* infinite slider styling */
+.slider-inf {
+    margin: auto;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+
+.slide_track-inf {
+    display: flex;
+    width: calc(180px * 18);
+    animation: scroll 70s linear infinite;
+    /* 18 items so 18 and 180px slide width*/
+}
+
+.slide_track-inf:hover {
+    animation-play-state: paused;
+}
+
+/* 18 items so 9 and 180px slide width */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-180px * 9));
+
+    }
+}
+
+.slide-inf {
+    height: 130px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    perspective: 100px;
+}
+
+.slide-inf img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 16px !important;
+    object-fit: contain;
+    object-position: center center;
+}
+
+.slider-inf::before {
+    left: 0;
+    top: 0;
+}
+
+.slider-inf::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.smallImage {
+    cursor: pointer;
+}
+
+
+/* web dev */
+.web-dev {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 100px 0px 100px;
+    gap: 40px;
+}
+
+.web-grid {
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    overflow: hidden;
+}
+
+.web-grid article {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    padding: 10px;
+    gap: 10px;
+    border-radius: var(--br);
+    border: 1px solid var(--codeTwo);
+}
+
+.web-grid article img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    aspect-ratio: 4/3;
+}
+
+
+/* middle component  */
+.middle-component {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 100px;
+    gap: 40px;
+}
+
+.hire-grid {
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    overflow: hidden;
+}
+
+.hire-grid article {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    border-radius: var(--br);
+    border: 1px solid var(--codeTwo);
+    text-align: center;
+}
+
+.hire-grid article img{
+    width: 200px;
+    height: 200px;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+}
+
+
+
+
+/* responsiveness */
+@media (max-width: 1265px) {
+    .top-component {
+        padding: 120px 50px 50px 50px;
+        gap: 20px;
+    }
+
+    .image-overlay {
+        max-width: 500px;
+    }
+
+    .top-overlay h1 {
+        font-size: 38px;
+    }
+
+    .top-overlay p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+@media (max-width: 970px) {
+
+    .page {
+        padding: 30px 15px;
+        gap: 20px;
+    }
+
+    .bottom-component,
+    .middle-component {
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
+    .web-dev, .hirecont {
+        padding: 20px 15px 0px 15px;
+        gap: 20px;
+    }
+
+    .brands {
+        padding: 20px 15px 30px 15px;
+    }
+
+    .top-component {
+        padding: 60px 15px 20px 15px;
+        gap: 20px;
+    }
+
+    .hirecont {
+        width: 100%;
+        flex-direction: column;
+        margin: none;
+    }
+
+    .hireone,
+    .hiretwo {
+        min-width: 0px;
+    }
+
+    .top-component {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .image-overlay {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .top-overlay {
+        width: 100%;
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .top-overlay h1 {
+        font-size: 32px;
+    }
+
+    .top-overlay p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .footer {
+        padding: 10px 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1401,18 +1786,4 @@ button:focus {
 
 .design {
     width: 700px;
-}
-
-
-
-/* responsiveness */
-@media only screen and (max-width: 850px) {
-    .page {
-        padding: 30px 15px;
-        gap: 10px;
-    }
-
-    .footer {
-        padding: 10px 15px;
-    }
 }

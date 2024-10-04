@@ -11,6 +11,8 @@ const ContactUs = lazy(() => import('./pages/ContactUs'));
 const Portfolio = lazy(() => import('./pages/Portfolio'));
 const Blogs = lazy(() => import('./pages/Blogs'));
 const Services = lazy(() => import('./pages/Services'));
+const WebDev = lazy(() => import('./pages/Services/WebDev'));
+const AppDev = lazy(() => import('./pages/Services/AppDev'));
 
 function App() {
   return (
@@ -19,12 +21,14 @@ function App() {
         <Layout>
           <Routes>
             {/* public pages */}
-            <Route path='/' element={<Home />} />
-            <Route path='/about-us' element={<AboutUs />} />
-            <Route path='/contact-us' element={<ContactUs />} />
-            <Route path='/portfolio' element={<Portfolio />} />
-            <Route path='/blogs' element={<Blogs/>} />
-            <Route path = '/services' element= {<Services/>}/>
+            <Route path='/' element={<Home />}/>
+            <Route path='/about-us' element={<AboutUs />}/>
+            <Route path='/contact-us' element={<ContactUs />}/>
+            <Route path='/portfolio' element={<Portfolio />}/>
+            <Route path='/blogs' element={<Blogs />}/>
+            <Route path ='/services' element= {<Services />}/>
+            <Route path ='/web-development' element= {<WebDev />}/>
+            <Route path ='/app-development' element= {<AppDev />}/>
 
             {/* not found */}
             <Route path='*' element={<div className='page flex center'>Path does not exist!</div>} />

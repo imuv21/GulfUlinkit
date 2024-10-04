@@ -77,12 +77,12 @@ const Header = () => {
                 <a href="/services" className="menu-link main-div" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                   Services <KeyboardArrowDownIcon  />
                   <div className={`hover-div ${isHovered ? 'visible' : ''}`}>
-                    <p className='text'>Web Development</p>
-                    <p className='text'>App Development</p>
-                    <p className='text'>Designing</p>
-                    <p className='text'>SEO</p>
-                    <p className='text'>Digital Marketing</p>
-                    <p className='text'>Brandings</p>
+                    <a href='/web-development' className='text'>Web Development</a>
+                    <a href='/app-development' className='text'>App Development</a>
+                    <a href='/web-development' className='text'>Designing</a>
+                    <a href='/web-development' className='text'>SEO</a>
+                    <a href='/web-development' className='text'>Digital Marketing</a>
+                    <a href='/web-development' className='text'>Brandings</a>
                   </div>
                 </a>
               </li>
