@@ -77,7 +77,7 @@ const ContactUs = () => {
             </p>
             <div className="flexcol start-center wh">
               <div className='flex center-start g10 wh'><LocalPhoneIcon /><p className="textBig">Phone : +971 56 765 8464</p></div>
-              <div className='flex center-start g10 wh'><EmailIcon /><p className="textBig">Email : sales@alayratech.com</p></div>
+              <div className='flex center-start g10 wh'><EmailIcon /><p className="textBig">Email : support@ulinkit.com</p></div>
             </div>
           </article>
           <form className='stylisharticle'>
