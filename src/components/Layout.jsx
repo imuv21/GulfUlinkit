@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
       <Fragment>
           <Header />
           {children}
-      
+          <Footer />
       </Fragment>
   );
 };
