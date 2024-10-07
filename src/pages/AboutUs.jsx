@@ -103,7 +103,7 @@ const AboutUs = () => {
             </div>
             <div className='info'>
               <h1 className=' heading slogun hetop'>Why we choosen</h1>
-              <p className='textBig para1'> U-link It Us offers global business development. They assist in the growth of a growing business. All types of events are organized by U-link It Us like IT / Data Security / AWS.</p>
+              <p className='textBig para1'> Gulf Ulinkit Us offers global business development. They assist in the growth of a growing business. All types of events are organized by Gulf Ulinkit Us like IT / Data Security / AWS.</p>
               <ul className='steps'>
                 <li className='list-items'><ImPointRight className='right-icon' /> Proven Experties and Experience.</li>
                 <li className='list-items'><ImPointRight className='right-icon' /> Storng Support Team.</li>
