@@ -1146,10 +1146,8 @@ button:focus {
     color: var(--codeThree);
 }
 
-.image-overlay {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
+.animation {
+    width: 400px;
     object-fit: contain;
     aspect-ratio: 4/3;
 }
@@ -1327,6 +1325,41 @@ button:focus {
 
 
 /* web dev */
+.web-tech {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 100px;
+    margin-top: 40px;
+    gap: 40px;
+    background-color: var(--codeSix);
+}
+.web-tech-grid {
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.web-tech-grid article {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    gap: 10px;
+    border-radius: var(--br);
+    border: 1px solid var(--codeTwo);
+}
+.web-tech-grid article img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    aspect-ratio: 4/3;
+}
 .web-dev {
     width: 100%;
     display: flex;
@@ -1336,7 +1369,6 @@ button:focus {
     padding: 40px 100px 0px 100px;
     gap: 40px;
 }
-
 .web-grid {
     width: 100%;
     display: grid;
@@ -1344,7 +1376,6 @@ button:focus {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     overflow: hidden;
 }
-
 .web-grid article {
     width: 100%;
     display: flex;
@@ -1356,7 +1387,6 @@ button:focus {
     border-radius: var(--br);
     border: 1px solid var(--codeTwo);
 }
-
 .web-grid article img {
     width: 90px;
     height: 90px;
@@ -1397,7 +1427,7 @@ button:focus {
     text-align: center;
 }
 
-.hire-grid article img{
+.hire-grid article img {
     width: 200px;
     height: 200px;
     aspect-ratio: 4/3;
@@ -1412,10 +1442,6 @@ button:focus {
     .top-component {
         padding: 120px 50px 50px 50px;
         gap: 20px;
-    }
-
-    .image-overlay {
-        max-width: 500px;
     }
 
     .top-overlay h1 {
@@ -1441,7 +1467,8 @@ button:focus {
         gap: 20px;
     }
 
-    .web-dev, .hirecont {
+    .web-dev,
+    .hirecont {
         padding: 20px 15px 0px 15px;
         gap: 20px;
     }
@@ -1469,11 +1496,6 @@ button:focus {
     .top-component {
         flex-direction: column-reverse;
         align-items: center;
-    }
-
-    .image-overlay {
-        width: 100%;
-        max-width: 600px;
     }
 
     .top-overlay {

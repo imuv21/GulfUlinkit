@@ -1,6 +1,6 @@
 import React, { Fragment, lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
-import webdev from '../../assets/services/web-remo.png';
+import webdev from '../../assets/json/Animation - 1728292563720.json';
 
 const TopComponent = lazy(() => import('../../components/TopComponent'));
 const MiddleComponent = lazy(() => import('../../components/MiddleComponent'));
@@ -18,7 +18,7 @@ const WebDev = () => {
             </Helmet>
 
             <Suspense fallback={<p>Loading...</p>}>
-                <TopComponent heading={'Web Development'} headingTwo={'Hire Web Developers'} textTwo={'Create your own development team now'} textThree={'Everything begins with a ‘Welcome’!! With ZERO forthright venture, we are resolved to give a strong establishment to your business thought. You’ll be astounded by working with our specialists. If not, the initial 7 days are on us.'} imglink={webdev} text={'Alayra Tech excels in delivering top-tier web development services that combine innovation, technical precision, and strategic planning to bring your digital vision to life. Our team specializes in creating custom websites that are not only visually appealing but also robust, secure, and scalable. Whether it’s an informative site, an e-commerce platform, or a complex web application, we ensure your online presence is powerful and purposeful.'} />
+                <TopComponent heading={'Web Development'} headingTwo={'Hire Web Developers'} textTwo={'Create your own development team now'} textThree={'Everything begins with a ‘Welcome’!! With ZERO forthright venture, we are resolved to give a strong establishment to your business thought. You’ll be astounded by working with our specialists. If not, the initial 7 days are on us.'} imglink={webdev} text={'Gulf Ulinkit excels in delivering top-tier web development services that combine innovation, technical precision, and strategic planning to bring your digital vision to life. Our team specializes in creating custom websites that are not only visually appealing but also robust, secure, and scalable. Whether it’s an informative site, an e-commerce platform, or a complex web application, we ensure your online presence is powerful and purposeful.'} />
             </Suspense>
 
             <article className='web-dev'>

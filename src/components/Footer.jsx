@@ -20,7 +20,7 @@
               <h2 className='heading  footer-heading'>Why Us</h2>
               <div className='some-content'>
                 <a href="#" className="brand" style={{ filter: 'none' }}>Ulinkit</a>
-                <p className=' para1'>At Alayra Tech, creativity isn’t just a part of our process; it’s at the core of who we are. We are a creative agency where imagination meets innovation. If you can think it, we can make it happen.</p>
+                <p className=' para1'>At Gulf Ulinkit, creativity isn’t just a part of our process; it’s at the core of who we are. We are a creative agency where imagination meets innovation. If you can think it, we can make it happen.</p>
               </div>
             </div>
             <div className='footer-container-2'>

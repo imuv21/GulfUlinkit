@@ -1,6 +1,14 @@
 import React, { Fragment } from 'react';
+import { useLottie } from "lottie-react";
 
 const TopComponent = ({ heading, headingTwo, text, textTwo, textThree, imglink }) => {
+
+     //json lottie animation
+     const options = {
+        animationData: imglink,
+        loop: true,
+    };
+    const { View } = useLottie(options);
 
     return (
         <Fragment>
@@ -10,7 +18,7 @@ const TopComponent = ({ heading, headingTwo, text, textTwo, textThree, imglink }
                     <p>{text}</p>
                     <button>Contact us</button>
                 </article>
-                <img src={imglink} className="image-overlay" alt={heading} />
+                <div className='animation'> {View} </div>
             </div>
             <div className="hirecont">
                 <div className='hireone'>

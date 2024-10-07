@@ -1,9 +1,9 @@
-import React, { Fragment, Suspense } from 'react'
-import { Helmet } from 'react-helmet-async'
-import ImageComponent from '../components/ImageComponent'
+import React, { Fragment, Suspense } from 'react';
+import { Helmet } from 'react-helmet-async';
+import ImageComponent from '../components/ImageComponent';
 import Mobile from '../assets/services/mobileApp.png';
-import Web from '../assets/services/web-remo.png'
-import Design from '../assets/services/desiging.png'
+import Web from '../assets/services/web-remo.png';
+import Design from '../assets/services/desiging.png';
 import Digital from '../assets/services/digital-marketing.png';
 import Seo from '../assets/services/seo-img.png';
 import Aws from '../assets/services/aws.png';

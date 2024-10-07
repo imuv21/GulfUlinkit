@@ -79,10 +79,10 @@ const Header = () => {
                   <div className={`hover-div ${isHovered ? 'visible' : ''}`}>
                     <a href='/web-development' className='text'>Web Development</a>
                     <a href='/app-development' className='text'>App Development</a>
-                    <a href='/web-development' className='text'>Designing</a>
-                    <a href='/web-development' className='text'>SEO</a>
-                    <a href='/web-development' className='text'>Digital Marketing</a>
-                    <a href='/web-development' className='text'>Brandings</a>
+                    <a href='/designing' className='text'>Designing</a>
+                    <a href='/seo' className='text'>SEO</a>
+                    <a href='/digital-marketing' className='text'>Digital Marketing</a>
+                    <a href='/branding' className='text'>Brandings</a>
                   </div>
                 </a>
               </li>
