@@ -90,8 +90,17 @@ const Header = () => {
               <li className="menu-item"><a href="/about-us" className="menu-link">About us</a></li>
               <li className="menu-item"><a href="/contact-us" className="menu-link">Contact us</a></li>
               <li className="menu-item"><a href="/blogs" className="menu-link">Blogs</a></li>
+
+              <li className="menu-item mlink"><a href="/services" className="menu-link">Services</a></li>
+              <li className="menu-item mlink"><a href="/digital-marketing" className="menu-link">Digital Marketing</a></li>
+              <li className="menu-item mlink"><a href="/web-development" className="menu-link">Web Development</a></li>
+              <li className="menu-item mlink"><a href="/app-development" className="menu-link">App Development</a></li>
+              <li className="menu-item mlink"><a href="/branding" className="menu-link">Brandings</a></li>
+              <li className="menu-item mlink"><a href="/designing" className="menu-link">Designing</a></li>
+              <li className="menu-item mlink"><a href="/seo" className="menu-link">SEO</a></li>
             </ul>
           </div>
+
           <a href="/contact-us" className="menu-block">Book An Appointment &nbsp;&nbsp; <EastIcon /></a>
         </nav>
       </header>
