@@ -92,7 +92,7 @@ const AboutUs = () => {
             {technology.map((item, id) => (
               <div key={id} className='img-container' ref={(el) => (containersRef.current[id] = el)}>
                 <div className='name-container'>
-                  <p className='text te'> {item.name}</p>
+                  <p className='text'> {item.name}</p>
                 </div>
               </div>
             ))}

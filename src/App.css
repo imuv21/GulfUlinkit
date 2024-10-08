@@ -388,9 +388,10 @@ button:focus {
 }
 
 .footer-flex {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 100px;
+  padding-top: 20px;
 }
 
 .footer-heading {
@@ -398,7 +399,7 @@ button:focus {
 }
 
 .footer-container-1 {
-    width: 25%
+    width: 100%
 }
 
 .some-content {
@@ -457,11 +458,6 @@ button:focus {
     font-family: 'Oswald', sans-serif;
 }
 
-.footer-content-flex {
-    display: flex;
-    justify-content: start;
-    gap: 30px;
-}
 
 .copyright {
     text-align: center;
@@ -1495,7 +1491,7 @@ button:focus {
 }
 
 .btna1 {
-    margin-top: 10px;
+    margin: 10px 0px;
     border: none;
     outline: none;
     padding: 10px;
@@ -1517,19 +1513,11 @@ button:focus {
 /*   */
 .flex-technology {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    /* grid-template-columns: repeat(6, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding-top: 40px;
     cursor: pointer;
-}
-
-.name-container {
-    padding-top: 10px;
-    border-radius: 50px;
-    width: 100%;
-    height: 50px;
-    background-color: transparent;
-    transition: background-color 0.9s ease-in-out;
 }
 
 .img-container {
@@ -1543,6 +1531,17 @@ button:focus {
     opacity: 0;
     transform: translateX(100%);
     animation: slideInFromRight 0.8s ease forwards;
+}
+
+.name-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50px;
+    height: 50px;
+    background-color: transparent;
+    transition: background-color 0.9s ease-in-out;
 }
 
 /* stages */
@@ -1585,8 +1584,9 @@ button:focus {
     background-color: #d3def2;
 }
 
-.te {
+.name-container p{
     color: #fff;
+    text-align: center !important;
 }
 
 /*  add animation  */
@@ -1744,6 +1744,23 @@ button:focus {
         font-size: 16px;
         line-height: 26px;
     }
+
+    .footer {
+        padding: 10px 15px;
+    }
+
+    /*  about page media query */
+    .info-content {
+        gap: 10px;
+    }
+
+    .flex-technology {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .btna1 {
+        width: 30%;
+    }
 }
 
 @media (max-width: 970px) {
@@ -1815,6 +1832,49 @@ button:focus {
     .footer {
         padding: 10px 15px;
     }
+
+
+    .footer {
+        padding: 10px 15px;
+    }
+
+    .footer-flex {
+        gap: 20px;
+    }
+
+    /*  about page media query */
+    .about-containt {
+        padding: 30px 15px;
+    }
+
+    .info-content {
+        gap: 10px;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .flex-technology {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /*  service media query for the responsiveness */
+    .services {
+        padding: 30px 15px;
+    }
+
+    .btna1 {
+        width: 30%;
+    }
+
+    .it-con {
+        display: none;
+    }
 }
 
 @media (max-width: 820px) {
@@ -1855,6 +1915,52 @@ button:focus {
     .swiper-cont {
         flex-direction: column;
     }
+
+
+    .footer {
+        padding: 10px 15px;
+    }
+
+    .footer-flex {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    /*  about page show in the media query */
+
+
+    .about-containt {
+        padding: 30px 15px;
+    }
+
+    .info-content {
+        display: block;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .flex-technology {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* for the services media query */
+    .services-padding {
+        padding: 30px 15px;
+    }
+
+    .btna1 {
+        width: 30%;
+    }
+
+    .it-con {
+        display: none;
+    }
 }
 
 @media (max-width: 750px) {
@@ -1867,6 +1973,7 @@ button:focus {
         padding: 10px 10px 0px 10px;
         gap: 10px;
     }
+
     .subcontact article div {
         width: 100%;
         gap: 10px;
@@ -1875,6 +1982,7 @@ button:focus {
         justify-content: center;
         flex-direction: column;
     }
+
     .subcontact article {
         width: fit-content;
         padding: 10px;
@@ -1892,7 +2000,7 @@ button:focus {
         align-items: center;
         justify-content: center;
     }
-    
+
     .git article {
         width: 100%;
         padding: 10px 0px;
@@ -2061,5 +2169,53 @@ button:focus {
         font-size: 12px;
         line-height: 18px;
         letter-spacing: 0.1rem;
+    }
+
+
+    .footer {
+        padding: 10px 15px;
+    }
+
+    .footer-flex {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .footer-contact {
+        gap: 5px;
+    }
+
+    /*  About page responsive tech  */
+    .about-containt {
+        padding: 30px 15px;
+    }
+
+    .info-content {
+        display: block;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .flex-technology {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /*  service  media query for the mobile devices */
+    .services-padding {
+        padding: 30px 15px;
+    }
+
+    .btna1 {
+        width: 30%;
+    }
+
+    .it-con {
+        display: none;
     }
 }
