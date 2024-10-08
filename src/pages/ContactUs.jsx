@@ -65,14 +65,14 @@ const ContactUs = () => {
               <WhatsAppIcon />
               <div>
                 <h1 className="headingSmol">Connect on WhatsApp</h1>
-                <p className='textBig'>+91 8077727525</p>
+                <p className='textBig'>+91 87505 18844</p>
               </div>
             </article>
             <article>
               <EmailIcon />
               <div>
                 <h1 className="headingSmol">Share a detailed specification</h1>
-                <p className='textBig'>support@ulinkit.com</p>
+                <p className='textBig'>info@ulinkit.com</p>
               </div>
             </article>
           </div>
@@ -81,7 +81,7 @@ const ContactUs = () => {
               <CreateIcon />
               <div>
                 <h1 className="headingSmol">Ready to share a Project?</h1>
-                <p className='textBig'>Submit a Form</p>
+                <p className='textBig'>Submit a form</p>
               </div>
             </article>
             <article>
@@ -106,8 +106,8 @@ const ContactUs = () => {
               have any issue resolved within 24 hours.
             </p>
             <div className="flexcol start-center wh">
-              <div className='flex center-start g10 wh'><LocalPhoneIcon /><p className="textBig">Phone : +971 56 765 8464</p></div>
-              <div className='flex center-start g10 wh'><EmailIcon /><p className="textBig">Email : support@ulinkit.com</p></div>
+              <div className='flex center-start g10 wh'><LocalPhoneIcon /><p className="textBig">Phone : +91 87505 18844</p></div>
+              <div className='flex center-start g10 wh'><EmailIcon /><p className="textBig">Email : info@ulinkit.com</p></div>
             </div>
           </article>
           <form className='stylisharticle' onSubmit={handleSubmit}>
