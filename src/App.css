@@ -71,7 +71,7 @@ input {
 
 textarea,
 input::placeholder {
-    color: var(--codeTwo);
+    color: var(--codeOne);
 }
 
 input,

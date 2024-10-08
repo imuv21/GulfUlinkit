@@ -65,7 +65,7 @@ const Header = () => {
               <span className="burger-line"></span>
               <span className="burger-line"></span>
             </div>
-            <a href="#" className="brand">Ulinkit<span style={{ color: 'green' }}></span></a>
+            <a href="/" className="brand">Ulinkit<span style={{ color: 'green' }}></span></a>
           </div>
 
           <div className="menu" id="menu">

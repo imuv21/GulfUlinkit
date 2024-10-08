@@ -53,39 +53,41 @@ const Coverflow = () => {
                     <div className="swiper-wrapper">
                         <div className="swiper-slide swiper-slide--one">
                             <div>
-                                <h2>Jellyfish</h2>
-                                <p>Jellyfish and sea jellies are the informal common names given to the medusa-phase of certain gelatinous members of the subphylum Medusozoa, a major part of the phylum Cnidaria.</p>
+                                <h2>Acme Corp</h2>
+                                <p>
+                                    Acme Corp specializes in cutting-edge technology solutions, delivering innovative products that transform businesses and improve efficiency globally.
+                                </p>
                             </div>
                         </div>
                         <div className="swiper-slide swiper-slide--two">
                             <div>
-                                <h2>Seahorse</h2>
+                                <h2>Bright Solutions</h2>
                                 <p>
-                                    Seahorses are mainly found in shallow tropical and temperate salt water throughout the world. They live in sheltered areas such as seagrass beds, estuaries, coral reefs, and mangroves. Four species are found in Pacific waters from North America to South America.
+                                    Bright Solutions is a leader in renewable energy, providing sustainable power solutions to residential and commercial clients worldwide.
                                 </p>
                             </div>
                         </div>
                         <div className="swiper-slide swiper-slide--three">
                             <div>
-                                <h2>octopus</h2>
+                                <h2>Vivid Designs</h2>
                                 <p>
-                                    Octopuses inhabit various regions of the ocean, including coral reefs, pelagic waters, and the seabed; some live in the intertidal zone and others at abyssal depths. Most species grow quickly, mature early, and are short-lived.
+                                    Vivid Designs is a creative agency known for its unique approach to branding and marketing, helping businesses stand out in crowded markets.
                                 </p>
                             </div>
                         </div>
                         <div className="swiper-slide swiper-slide--four">
                             <div>
-                                <h2>Shark</h2>
+                                <h2>Pixel Innovations</h2>
                                 <p>
-                                    Sharks are a group of elasmobranch fish characterized by a cartilaginous skeleton, five to seven gill slits on the sides of the head, and pectoral fins that are not fused to the head.
+                                    Pixel Innovations excels in developing digital products, from mobile apps to full-scale web platforms, driving user engagement and satisfaction.
                                 </p>
                             </div>
                         </div>
                         <div className="swiper-slide swiper-slide--five">
                             <div>
-                                <h2>Dolphin</h2>
+                                <h2>Nimbus Logistics</h2>
                                 <p>
-                                    Dolphins are widespread. Most species prefer the warm waters of the tropic zones, but some, such as the right whale dolphin, prefer colder climates. Dolphins feed largely on fish and squid, but a few, such as the orca, feed on large mammals such as seals.
+                                    Nimbus Logistics offers reliable and efficient transportation services, specializing in logistics management and supply chain optimization.
                                 </p>
                             </div>
                         </div>

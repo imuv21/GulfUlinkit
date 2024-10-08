@@ -133,11 +133,11 @@ const ImageSlider = () => {
             </Helmet>
 
             <div className="slider" id="slider1" ref={slider1Ref}>
-                <div style={{ backgroundImage: `url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/1200_110627-8240-Myst.jpg)` }}></div>
-                <div style={{ backgroundImage: `url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/Gif-pont-lueur-600.gif)` }}></div>
-                <div style={{ backgroundImage: `url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/1200_Sharpened-version.jpg)` }}></div>
-                <div style={{ backgroundImage: `url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/jungle.jpg)` }}></div>
-                <div style={{ backgroundImage: `url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/1200_bodie-11.jpg)` }}></div>
+                <div style={{ backgroundImage: `url(https://res.cloudinary.com/dey1tujp8/image/upload/v1728372072/GulfUlinkit/EA99CC738B99D0AA67987EC2976D550F_lr6cxt.webp)` }}></div>
+                <div style={{ backgroundImage: `url(https://res.cloudinary.com/dey1tujp8/image/upload/v1728371689/GulfUlinkit/FRSdefault_czuc1i.avif)` }}></div>
+                <div style={{ backgroundImage: `url(https://res.cloudinary.com/dey1tujp8/image/upload/v1728372215/GulfUlinkit/Firefly_create_an_image_for_this_Discover_the_essence_of_SEO_its_benefits_for_small_businesses_an_1_1_qyv2mo.jpg)` }}></div>
+                <div style={{ backgroundImage: `url(https://res.cloudinary.com/dey1tujp8/image/upload/v1728372408/GulfUlinkit/mobile-app-development-trends_t9uf1s.png)` }}></div>
+                <div style={{ backgroundImage: `url(https://res.cloudinary.com/dey1tujp8/image/upload/v1728371940/GulfUlinkit/How-Many-Web-Developers-in-the-World-1_ylju9b.avif)` }}></div>
                 <i className="left" style={{ zIndex: 3, position: 'absolute' }}>
                     <KeyboardArrowLeftIcon />
                 </i>
