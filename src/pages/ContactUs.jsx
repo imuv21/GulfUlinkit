@@ -1,4 +1,6 @@
-import React, { Fragment, lazy, Suspense } from 'react';
+import React, { Fragment, lazy, Suspense, useState } from 'react';
+import { collection, addDoc } from 'firebase/firestore';
+import { db } from '../components/FireBase';
 import { Helmet } from 'react-helmet-async';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import EmailIcon from '@mui/icons-material/Email';
@@ -8,9 +10,36 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 const ImageComponent = lazy(() => import('../components/ImageComponent'));
 
 
-
-
 const ContactUs = () => {
+
+  const [formData, setFormData] = useState({ fullName: '', phoneNumber: '', email: '', message: '' });
+  const [saving, setSaving] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (saving) return;
+    setSaving(true);
+
+    try {
+      const docRef = await addDoc(collection(db, "contactFormSubmissions"), {
+        fullName: formData.fullName,
+        phoneNumber: formData.phoneNumber,
+        email: formData.email,
+        message: formData.message,
+        timestamp: new Date() 
+      });
+      alert('Form submitted successfully!');
+      console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    } finally {
+      setSaving(false);
+    }
+  };
 
   return (
     <Fragment>
@@ -80,13 +109,13 @@ const ContactUs = () => {
               <div className='flex center-start g10 wh'><EmailIcon /><p className="textBig">Email : support@ulinkit.com</p></div>
             </div>
           </article>
-          <form className='stylisharticle'>
+          <form className='stylisharticle' onSubmit={handleSubmit}>
             <h3 className="heading">Ready to start a Project?</h3>
-            <input type="text" placeholder='Full Name' />
-            <input type="number" placeholder='Phone Number' />
-            <input type="email" placeholder='Email' />
-            <textarea name="Message" id="Message" rows={3}></textarea>
-            <button type='submit'>Submit</button>
+            <input type="text" name="fullName" placeholder='Full Name' value={formData.fullName} onChange={handleChange} />
+            <input type="number" name="phoneNumber" placeholder='Phone Number' value={formData.phoneNumber} onChange={handleChange} />
+            <input type="email" name="email" placeholder='Email' value={formData.email} onChange={handleChange} />
+            <textarea name="message" id="Message" rows={3} placeholder="Message" value={formData.message} onChange={handleChange}></textarea>
+            <button type='submit' disabled={saving}>{saving ? 'Submitting...' : 'Submit'}</button>
           </form>
         </section>
       </div>
