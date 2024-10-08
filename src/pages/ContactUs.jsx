@@ -2,6 +2,7 @@ import React, { Fragment, lazy, Suspense, useState } from 'react';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../components/FireBase';
 import { Helmet } from 'react-helmet-async';
+import DOMPurify from 'dompurify';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import EmailIcon from '@mui/icons-material/Email';
 import CreateIcon from '@mui/icons-material/Create';
@@ -26,10 +27,10 @@ const ContactUs = () => {
 
     try {
       const docRef = await addDoc(collection(db, "contactFormSubmissions"), {
-        fullName: formData.fullName,
-        phoneNumber: formData.phoneNumber,
-        email: formData.email,
-        message: formData.message,
+        fullName: DOMPurify.sanitize(formData.fullName),
+        phoneNumber: DOMPurify.sanitize(formData.phoneNumber),
+        email: DOMPurify.sanitize(formData.email),
+        message: DOMPurify.sanitize(formData.message),
         timestamp: new Date() 
       });
       alert('Form submitted successfully!');
