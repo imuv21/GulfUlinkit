@@ -67,8 +67,8 @@ const ContactUs = () => {
         <section className='git'>
           <article>
             <div className="flexcol start-center wh">
-              <h2 className="heading wh">Get in touch</h2>
-              <h1 className="headingBig wh">Contact us</h1>
+              <h2 className="heading">Get in touch</h2>
+              <h1 className="headingBig">Contact us</h1>
             </div>
             <p className="textBig wh" style={{ textTransform: 'none' }}>
               I have worls-class, flexible support via live chat,

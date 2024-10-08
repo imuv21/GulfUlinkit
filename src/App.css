@@ -271,6 +271,7 @@ button:focus {
     font-weight: 400;
     letter-spacing: 0.1rem;
     color: var(--codeSeven);
+    text-align: justify;
 }
 
 .text {
@@ -279,6 +280,7 @@ button:focus {
     font-weight: 400;
     letter-spacing: 0.1rem;
     color: var(--codeSeven);
+    text-align: justify;
 }
 
 .textSmol {
@@ -287,6 +289,7 @@ button:focus {
     font-weight: 400;
     letter-spacing: 0.1rem;
     color: var(--codeSeven);
+    text-align: justify;
 }
 
 /* ui */
@@ -1064,7 +1067,6 @@ button:focus {
 /* contact us page  */
 .contact {
     width: 100%;
-    gap: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1076,12 +1078,14 @@ button:focus {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px;
+    gap: 10px;
 }
 
 .subcontact article {
     width: 100%;
-    padding: 30px 30px 30px 100px;
-    gap: 30px;
+    padding: 10px;
+    gap: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1094,18 +1098,16 @@ button:focus {
 }
 
 .subcontact article div {
-    width: 100%;
     gap: 10px;
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
 .git {
     width: 100%;
-    padding: 10px;
-    gap: 10px;
+    gap: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1421,8 +1423,7 @@ button:focus {
     width: 100%;
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
 }
 
 .hire-grid article {
@@ -1758,6 +1759,12 @@ button:focus {
         gap: 20px;
     }
 
+    .web-tech {
+        padding: 20px 15px;
+        margin-top: 20px;
+        gap: 20px;
+    }
+
     .web-dev,
     .hirecont {
         padding: 20px 15px 0px 15px;
@@ -1816,6 +1823,7 @@ button:focus {
         height: 390px;
         border-radius: var(--brTwo);
     }
+
     .menu-item:nth-child(3) {
         display: none;
     }
@@ -1833,6 +1841,7 @@ button:focus {
     h1 {
         text-align: center;
     }
+
     .secOne {
         width: 100%;
         display: flex;
@@ -1842,12 +1851,69 @@ button:focus {
         gap: 20px;
         overflow: hidden;
     }
+
     .swiper-cont {
         flex-direction: column;
     }
 }
 
+@media (max-width: 750px) {
+    .subcontact {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px 10px 0px 10px;
+        gap: 10px;
+    }
+    .subcontact article div {
+        width: 100%;
+        gap: 10px;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .subcontact article {
+        width: fit-content;
+        padding: 10px;
+        gap: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .git {
+        width: 100%;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .git article {
+        width: 100%;
+        padding: 10px 0px;
+        gap: 10px;
+    }
+}
+
 @media only screen and (max-width: 550px) {
+
+    .hire-grid {
+        width: 100%;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .animation {
+        width: 370px;
+        object-fit: contain;
+        aspect-ratio: 4/3;
+    }
 
     .responsive-image {
         width: 100%;
@@ -1855,6 +1921,7 @@ button:focus {
         object-fit: cover;
         filter: brightness(0.5);
     }
+
     .text-overlay {
         width: 70%;
         position: absolute;
@@ -1866,10 +1933,12 @@ button:focus {
         top: 50%;
         left: 20px;
     }
+
     .text-overlay h1 {
         color: var(--codeThree);
         font-size: 25px;
     }
+
     .text-overlay p {
         color: var(--codeThree);
         font-size: 14px;
@@ -1880,10 +1949,12 @@ button:focus {
         padding: 5px;
         gap: 5px;
     }
+
     .counting div {
         gap: 5px;
         padding: 5px;
     }
+
     .counting div .MuiSvgIcon-root {
         width: 40px;
         height: 40px;
@@ -1896,12 +1967,14 @@ button:focus {
         gap: 20px;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
+
     .gallery {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 20px;
         width: 100%;
     }
+
     .galleryBtns button {
         background-color: var(--codeTwo);
         border: none;
@@ -1910,14 +1983,17 @@ button:focus {
         cursor: pointer;
         font-size: 12px;
     }
+
     .blogridiv img {
         width: 100%;
         height: auto;
         object-fit: cover;
     }
+
     .blogridiv article {
         padding: 15px;
     }
+
     .ssubsec {
         width: 100%;
         display: flex;
@@ -1926,16 +2002,18 @@ button:focus {
         justify-content: start;
         gap: 10px;
     }
+
     .subsecOne .textBig {
         font-size: 14px;
         line-height: 20px;
         letter-spacing: 0.1rem;
     }
+
     .subsecOne .heading {
         text-align: center;
         width: 100%;
     }
-    
+
 
     .slider,
     .slider>div {

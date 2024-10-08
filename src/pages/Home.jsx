@@ -92,7 +92,7 @@ const Home = () => {
       <Helmet>
         <title>Gulf Ulinkit | Home Page</title>
         <meta name="description" content=""></meta>
-        <link rel="canonical" href="" />
+        <link rel="canonical" href="https://ulinkit.netlify.app/" />
       </Helmet>
 
       <Suspense fallback={<p>Loading...</p>}>
@@ -240,6 +240,7 @@ const Home = () => {
         </Suspense>
 
       </div>
+
     </Fragment>
   )
 };
