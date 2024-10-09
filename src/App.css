@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 :root {
-    --font: 'Roboto', sans-serif;
-    --fontTwo: 'Oswald', sans-serif;
+    --font: "Nunito", sans-serif;
+    --fontTwo: "Oswald", sans-serif;
     --infont: 12px;
     --br: 3px;
     --brTwo: 10px;
@@ -17,7 +17,7 @@
     --codeFour: #0066ff;
     --codeFive: #00b3ff;
 
-    --bg: radial-gradient(circle at 20% 0%, rgba(49, 210, 255, 0.30) 1%, transparent 40%), radial-gradient(circle at 80% 0%, rgba(49, 210, 255, 0.30) 1%, transparent 40%);
+    --bg: radial-gradient(circle at 20% 50%, rgba(136, 229, 255, 0.3) 1%, transparent 30%), radial-gradient(circle at 70% 50%, rgba(136, 229, 255, 0.3) 1%, transparent 30%);
     --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --trans: all 0.4s ease-in-out;
 }
@@ -266,30 +266,27 @@ button:focus {
 }
 
 .textBig {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 17px;
     font-weight: 400;
-    letter-spacing: 0.1rem;
     color: var(--codeSeven);
-    text-align: justify;
+    font-family: var(--font);
+    line-height: 30px;
 }
 
 .text {
     font-size: 15px;
-    line-height: 20px;
     font-weight: 400;
-    letter-spacing: 0.1rem;
     color: var(--codeSeven);
-    text-align: justify;
+    font-family: var(--font);
+    line-height: 20px;
 }
 
 .textSmol {
     font-size: 13px;
-    line-height: 18px;
     font-weight: 400;
-    letter-spacing: 0.1rem;
     color: var(--codeSeven);
-    text-align: justify;
+    font-family: var(--font);
+    line-height: 18px;
 }
 
 /* ui */
@@ -388,10 +385,10 @@ button:focus {
 }
 
 .footer-flex {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 100px;
-  padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px;
+    padding-top: 20px;
 }
 
 .footer-heading {
@@ -780,17 +777,19 @@ button:focus {
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    gap: 15px;
-    padding: 0px 0px 20px 0px;
+    gap: 20px;
+    padding: 30px;
+    border: 3px inset var(--codeSix);
 }
 
 .subsecOne button {
     color: var(--codeFour);
-    font-size: 18px;
+    font-size: 15px;
     border-radius: var(--br);
     background: #e8e8e8;
     border: 1px solid #e8e8e8;
     transition: var(--trans);
+    margin-top: 20px;
     box-shadow: 6px 6px 6px #c5c5c5, -6px -6px 6px var(--codeThree);
 }
 
@@ -828,7 +827,11 @@ button:focus {
     gap: 12px;
     padding: 20px;
     border-radius: var(--brTwo);
-    background: linear-gradient(145deg, #e2e2e2, var(--codeThree));
+    background: linear-gradient(145deg, #ebebeb, var(--codeThree));
+}
+
+.ssubsec article {
+    content: 'dfdk';
 }
 
 .ssubsec article .MuiSvgIcon-root {
@@ -855,8 +858,8 @@ button:focus {
     padding: 30px;
     gap: 20px;
     border-radius: var(--brTwo);
-    background: #ededed;
-    box-shadow: inset 10px 10px 12px #e1e1e1, inset -10px -10px 12px #f9f9f9;
+    background: #fefefe;
+    box-shadow: inset 10px 10px 17px #e1e1e1, inset -10px -10px 17px #f9f9f9;
 }
 
 .youtube {
@@ -1584,7 +1587,7 @@ button:focus {
     background-color: #d3def2;
 }
 
-.name-container p{
+.name-container p {
     color: #fff;
     text-align: center !important;
 }

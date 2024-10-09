@@ -102,17 +102,27 @@ const Home = () => {
       <div className='page flexcol'>
 
         <section className="secOne">
+
           <article className="hiOneRev delayOne subsecOne" ref={(el) => (hiOneRef.current[0] = el)}>
-            <p className='heading'>WE ARE A CREATIVE AGENCY</p>
-            <h1 className='headingBig'>If You Can Think It, We Can Make It</h1>
-            <h2 className='textBig'>
+            <div className="flexcol start-center wh">
+              <p className='heading'>WE ARE A CREATIVE AGENCY</p>
+              <h1 className='headingBig'>If You Can Think It, We Can Make It</h1>
+            </div>
+
+            <h2 className='text'>
               At Gulf Ulinkit, creativity isn’t just a part of our process; it’s at the core of who we are. We are a creative agency where imagination meets innovation. If you can think it, we can make it happen. With a team of visionary designers, developers, and strategists, we turn ideas into reality, crafting digital experiences that leave a lasting impression.
-              Our approach is collaborative and forward-thinking. We believe that every challenge presents an opportunity for creativity, and every idea has the potential to be groundbreaking. We work closely with our clients, embracing their vision while pushing the boundaries of what’s possible to create something truly unique and impactful.
+              Our approach is collaborative and forward-thinking. We believe that every challenge presents an opportunity for creativity, and every idea has the potential to be groundbreaking.
+            </h2>
+            
+            <h2 className='text'>
+              We work closely with our clients, embracing their vision while pushing the boundaries of what’s possible to create something truly unique and impactful.
               From stunning web designs that captivate users to digital marketing campaigns that resonate and engage, Gulf Ulinkit is dedicated to excellence in all we do. Our mission is to help your business stand out in the digital landscape, combining aesthetic appeal with functional design to achieve your goals.
               Let your imagination run wild, and trust Gulf Ulinkit to bring your vision to life. Together, we can create something extraordinary.
             </h2>
+
             <button onClick={contactUs}>Book Free Consultation</button>
           </article>
+
           <section className='subsecTwo'>
             <section className="hiOne delayOne ssubsec" ref={(el) => (hiOneRef.current[1] = el)}>
               <article>
@@ -234,7 +244,7 @@ const Home = () => {
             <Blog key={index} />
           ))}
         </div>
-        
+
         <Suspense fallback={<p>Loading...</p>}>
           <Coverflow />
         </Suspense>
