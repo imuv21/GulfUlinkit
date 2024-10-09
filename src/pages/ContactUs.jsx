@@ -1,4 +1,4 @@
-import React, { Fragment, lazy, Suspense, useState } from 'react';
+import React, { Fragment, lazy, Suspense, useState, useEffect, useRef } from 'react';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../components/FireBase';
 import { Helmet } from 'react-helmet-async';
@@ -15,6 +15,8 @@ const ContactUs = () => {
 
   const [formData, setFormData] = useState({ fullName: '', phoneNumber: '', email: '', message: '' });
   const [saving, setSaving] = useState(false);
+  const hiThreeRef = useRef([]);
+  const hiFourRef = useRef([]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -42,6 +44,34 @@ const ContactUs = () => {
     }
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+         if (entry.target.classList.contains('delayThree')) {
+            entry.target.classList.add('siThree');
+          } else if (entry.target.classList.contains('delayFour')) {
+            entry.target.classList.add('siFour');
+          }
+        } else {
+          if (entry.target.classList.contains('delayThree')) {
+            entry.target.classList.remove('siThree');
+          } else if (entry.target.classList.contains('delayFour')) {
+            entry.target.classList.remove('siFour');
+          }
+        }
+      });
+    });
+
+    hiThreeRef.current.forEach((el) => observer.observe(el));
+    hiFourRef.current.forEach((el) => observer.observe(el));
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+
   return (
     <Fragment>
       <Helmet>
@@ -60,7 +90,7 @@ const ContactUs = () => {
         </article>
 
         <section className='contact'>
-          <div className='subcontact'>
+          <div className='subcontact hiFourRev delayFour' ref={(el) => (hiFourRef.current[0] = el)}>
             <article>
               <WhatsAppIcon />
               <div>
@@ -76,7 +106,7 @@ const ContactUs = () => {
               </div>
             </article>
           </div>
-          <div className='subcontact'>
+          <div className='subcontact hiFour delayFour' ref={(el) => (hiFourRef.current[1] = el)}>
             <article>
               <CreateIcon />
               <div>
@@ -95,7 +125,7 @@ const ContactUs = () => {
         </section>
 
         <section className='git'>
-          <article>
+          <article className='hiThreeRev delayThree' ref={(el) => (hiThreeRef.current[0] = el)}>
             <div className="flexcol start-center wh">
               <h2 className="heading">Get in touch</h2>
               <h1 className="headingBig">Contact us</h1>
@@ -110,7 +140,7 @@ const ContactUs = () => {
               <div className='flex center-start g10 wh'><EmailIcon /><p className="textBig">Email : info@ulinkit.com</p></div>
             </div>
           </article>
-          <form className='stylisharticle' onSubmit={handleSubmit}>
+          <form className='stylisharticle hiThree delayThree' onSubmit={handleSubmit} ref={(el) => (hiThreeRef.current[1] = el)}>
             <h3 className="heading">Ready to start a Project?</h3>
             <input type="text" name="fullName" placeholder='Full Name' value={formData.fullName} onChange={handleChange} />
             <input type="number" name="phoneNumber" placeholder='Phone Number' value={formData.phoneNumber} onChange={handleChange} />

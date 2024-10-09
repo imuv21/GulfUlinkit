@@ -17,7 +17,6 @@
     --codeFour: #0066ff;
     --codeFive: #00b3ff;
 
-    --bg: radial-gradient(circle at 20% 50%, rgba(136, 229, 255, 0.3) 1%, transparent 30%), radial-gradient(circle at 70% 50%, rgba(136, 229, 255, 0.3) 1%, transparent 30%);
     --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --trans: all 0.4s ease-in-out;
 }
@@ -757,6 +756,144 @@ button:focus {
     transition-delay: 500ms;
 }
 
+/* contact us intersection observer */
+.hiFour {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 0.7s ease-in-out;
+    visibility: hidden;
+}
+
+.hiFourRev {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 0.7s ease-in-out;
+    visibility: hidden;
+}
+
+.siFour {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.delayFour:nth-child(1) {
+    transition-delay: 200ms;
+}
+
+.delayFour:nth-child(2) {
+    transition-delay: 400ms;
+}
+
+/* contact us intersection observer */
+.hiThree {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 0.7s ease-in-out;
+    visibility: hidden;
+}
+
+.hiThreeRev {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 0.7s ease-in-out;
+    visibility: hidden;
+}
+
+.siThree {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.delayThree:nth-child(1) {
+    transition-delay: 200ms;
+}
+
+.delayThree:nth-child(2) {
+    transition-delay: 400ms;
+}
+
+
+/* web dev intersection observer */
+.hiFive {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 0.7s ease-in-out;
+    visibility: hidden;
+}
+
+.hiFiveRev {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 0.7s ease-in-out;
+    visibility: hidden;
+}
+
+.siFive {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.delayFive:nth-child(1) {
+    transition-delay: 100ms;
+}
+
+.delayFive:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.delayFive:nth-child(3) {
+    transition-delay: 300ms;
+}
+
+.delayFive:nth-child(4) {
+    transition-delay: 400ms;
+}
+
+.delayFive:nth-child(5) {
+    transition-delay: 500ms;
+}
+
+.delayFive:nth-child(6) {
+    transition-delay: 600ms;
+}
+
+.delayFive:nth-child(7) {
+    transition-delay: 600ms;
+}
+
+.delayFive:nth-child(8) {
+    transition-delay: 700ms;
+}
+
+.delayFive:nth-child(9) {
+    transition-delay: 800ms;
+}
+
+.delayFive:nth-child(10) {
+    transition-delay: 900ms;
+}
+
+.delayFive:nth-child(11) {
+    transition-delay: 1000ms;
+}
+
+.delayFive:nth-child(12) {
+    transition-delay: 1100ms;
+}
+
+
 
 /* home styling */
 /* think tank */
@@ -779,7 +916,8 @@ button:focus {
     justify-content: center;
     gap: 20px;
     padding: 30px;
-    border: 3px inset var(--codeSix);
+    border-top: 3px solid var(--codeSix);
+    border-left: 3px solid var(--codeSix);
 }
 
 .subsecOne button {
@@ -826,8 +964,8 @@ button:focus {
     flex-direction: column;
     gap: 12px;
     padding: 20px;
-    border-radius: var(--brTwo);
-    background: linear-gradient(145deg, #ebebeb, var(--codeThree));
+    border-top: 3px solid var(--codeSix);
+    border-left: 3px solid var(--codeSix);
 }
 
 .ssubsec article {
@@ -857,9 +995,7 @@ button:focus {
     flex-direction: column;
     padding: 30px;
     gap: 20px;
-    border-radius: var(--brTwo);
-    background: #fefefe;
-    box-shadow: inset 10px 10px 17px #e1e1e1, inset -10px -10px 17px #f9f9f9;
+    border: 2px inset var(--codeFive);
 }
 
 .youtube {
@@ -1070,6 +1206,7 @@ button:focus {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .subcontact {
@@ -1110,6 +1247,7 @@ button:focus {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .git article {
@@ -1652,7 +1790,9 @@ button:focus {
 .team-center {
     text-align: center;
 }
-
+.lovercase{
+    text-transform: lowercase;
+}
 .team-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

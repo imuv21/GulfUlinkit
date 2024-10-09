@@ -63,7 +63,7 @@ const Footer = () => {
                 </div>
                 <div className='footer-contact'>
                   <MdEmail className='icons-contact' />
-                  <p className='para2'>Email: <span>dhiraj@ulinkitus.com</span></p>
+                  <p className='para2'>Email: <span className='lovercase'>dhiraj@ulinkitus.com</span></p>
                 </div>
                 {/*  dubai address */}
               </div>
@@ -71,11 +71,11 @@ const Footer = () => {
                 <p className='para3'>Dubai-</p>
                 <div className='footer-contact'>
                   <MdPhone className='icons-contact' />
-                  <p className='para2'>Phone: <span>+96 6570690925</span></p>
+                  <p className='para2'>Phone: <span>+966 570690925</span></p>
                 </div>
                 <div className='footer-contact'>
                   <img src={Watshapp} className='icons-contact  whatsapp-icon' />
-                  <p className='para2'>Phone: <span>+97 1558408932</span></p>
+                  <p className='para2'>Phone: <span>+971 558408932</span></p>
                 </div>
                 <div className='footer-contact'>
                   <GrLocation className='icons-contact' />
@@ -83,7 +83,7 @@ const Footer = () => {
                 </div>
                 <div className='footer-contact'>
                   <MdEmail className='icons-contact' />
-                  <p className='para2'>Email: <span>info@gmail.com</span></p>
+                  <p className='para2'>Email: <span className='lovercase'>info@gmail.com</span></p>
                 </div>
                 {/*  dubai address */}
               </div>
@@ -99,7 +99,7 @@ const Footer = () => {
                 </div>
                 <div className='footer-contact'>
                   <MdEmail className='icons-contact' />
-                  <p className='para2'>Email: <span>info@gmail.com</span></p>
+                  <p className='para2'>Email: <span className='lovercase'>info@gmail.com</span></p>
                 </div>
                 {/*  dubai address */}
               </div>

@@ -1,4 +1,4 @@
-import React, { Fragment, lazy, Suspense } from 'react';
+import React, { Fragment, lazy, Suspense, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import webdev from '../../assets/json/Animation - 1728292563720.json';
 
@@ -8,6 +8,27 @@ const BottomComponent = lazy(() => import('../../components/BottomComponent'));
 
 
 const WebDev = () => {
+    const hiFiveRef = useRef([]);
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('delayFive')) {
+                        entry.target.classList.add('siFive');
+                    }
+                } else {
+                    if (entry.target.classList.contains('delayFive')) {
+                        entry.target.classList.remove('siFive');
+                    }
+                }
+            });
+        });
+
+        hiFiveRef.current.forEach((el) => observer.observe(el));
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
 
     return (
         <Fragment>
@@ -27,18 +48,42 @@ const WebDev = () => {
                     <h2 className='text'>In-house specialists of contemporary web technologies that encapsulate server-side and front-end stacks.</h2>
                 </div>
                 <div className="web-grid">
-                    <article><h1 className='heading'>php</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728040573/GulfUlinkit/icons8-php-100_c8p4gt.png" alt="php" /></article>
-                    <article><h1 className='heading'>.net</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728041102/GulfUlinkit/icons8-dot-net-100_twafrn.png" alt="dot-net" /></article>
-                    <article><h1 className='heading'>wordpress</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728041243/GulfUlinkit/icons8-wordpress-100_dwcdow.png" alt="wordpress" /></article>
-                    <article><h1 className='heading'>magento</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728041442/GulfUlinkit/icons8-magento-100_hrtx3a.png" alt="magento" /></article>
-                    <article><h1 className='heading'>python</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728043201/GulfUlinkit/icons8-python-100_1_zbwcec.png" alt="python" /></article>
-                    <article><h1 className='heading'>shopify</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728043313/GulfUlinkit/icons8-shopify-100_2_jdeqzz.png" alt="shopify" /></article>
-                    <article><h1 className='heading'>drupal</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728042100/GulfUlinkit/icons8-drupal-100_wb3w4h.png" alt="drupal" /></article>
-                    <article><h1 className='heading'>react js</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728042228/GulfUlinkit/icons8-react-js-100_tnwbv5.png" alt="react-js" /></article>
-                    <article><h1 className='heading'>node js</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728042369/GulfUlinkit/icons8-node-js-100_y5idm5.png" alt="node-js" /></article>
-                    <article><h1 className='heading'>html5</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728042513/GulfUlinkit/icons8-html-5-100_xbugdu.png" alt="html5" /></article>
-                    <article><h1 className='heading'>angular js</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728042716/GulfUlinkit/icons8-angularjs-100_ejtlur.png" alt="angular-js" /></article>
-                    <article><h1 className='heading'>my sql</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728042914/GulfUlinkit/icons8-my-sql-100_hkgb5q.png" alt="my-sql" /></article>
+                    <article className="hiFiveRev delayFive" ref={(el) => (hiFiveRef.current[0] = el)}>
+                        <h1 className='heading'>php</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728040573/GulfUlinkit/icons8-php-100_c8p4gt.png" alt="php" />
+                    </article>
+                    <article className="hiFiveRev delayFive" ref={(el) => (hiFiveRef.current[1] = el)}>
+                        <h1 className='heading'>.net</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728041102/GulfUlinkit/icons8-dot-net-100_twafrn.png" alt="dot-net" />
+                    </article>
+                    <article className="hiFiveRev delayFive" ref={(el) => (hiFiveRef.current[2] = el)}>
+                        <h1 className='heading'>wordpress</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728041243/GulfUlinkit/icons8-wordpress-100_dwcdow.png" alt="wordpress" />
+                    </article>
+                    <article className="hiFiveRev delayFive" ref={(el) => (hiFiveRef.current[3] = el)}>
+                        <h1 className='heading'>magento</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728041442/GulfUlinkit/icons8-magento-100_hrtx3a.png" alt="magento" />
+                    </article>
+                    <article className="hiFiveRev delayFive" ref={(el) => (hiFiveRef.current[4] = el)}>
+                        <h1 className='heading'>python</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728043201/GulfUlinkit/icons8-python-100_1_zbwcec.png" alt="python" />
+                    </article>
+                    <article className="hiFiveRev delayFive" ref={(el) => (hiFiveRef.current[5] = el)}>
+                        <h1 className='heading'>shopify</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728043313/GulfUlinkit/icons8-shopify-100_2_jdeqzz.png" alt="shopify" />
+                    </article>
+                    <article className="hiFive delayFive" ref={(el) => (hiFiveRef.current[6] = el)}>
+                        <h1 className='heading'>drupal</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728042100/GulfUlinkit/icons8-drupal-100_wb3w4h.png" alt="drupal" />
+                    </article>
+                    <article className="hiFive delayFive" ref={(el) => (hiFiveRef.current[7] = el)}>
+                        <h1 className='heading'>react js</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728042228/GulfUlinkit/icons8-react-js-100_tnwbv5.png" alt="react-js" />
+                    </article>
+                    <article className="hiFive delayFive" ref={(el) => (hiFiveRef.current[8] = el)}>
+                        <h1 className='heading'>node js</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728042369/GulfUlinkit/icons8-node-js-100_y5idm5.png" alt="node-js" />
+                    </article>
+                    <article className="hiFive delayFive" ref={(el) => (hiFiveRef.current[9] = el)}>
+                        <h1 className='heading'>html5</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728042513/GulfUlinkit/icons8-html-5-100_xbugdu.png" alt="html5" />
+                    </article>
+                    <article className="hiFive delayFive" ref={(el) => (hiFiveRef.current[10] = el)}>
+                        <h1 className='heading'>angular js</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728042716/GulfUlinkit/icons8-angularjs-100_ejtlur.png" alt="angular-js" />
+                    </article>
+                    <article className="hiFive delayFive" ref={(el) => (hiFiveRef.current[11] = el)}>
+                        <h1 className='heading'>my sql</h1><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728042914/GulfUlinkit/icons8-my-sql-100_hkgb5q.png" alt="my-sql" />
+                    </article>
                 </div>
             </article>
 
