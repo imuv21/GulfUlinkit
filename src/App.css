@@ -701,11 +701,11 @@ button:focus {
 }
 
 .delayOne:nth-child(2) {
-    transition-delay: 400ms;
+    transition-delay: 300ms;
 }
 
 .delayOne:nth-child(3) {
-    transition-delay: 600ms;
+    transition-delay: 400ms;
 }
 
 /* intersection observer */
@@ -785,7 +785,7 @@ button:focus {
 }
 
 .delayFour:nth-child(2) {
-    transition-delay: 400ms;
+    transition-delay: 300ms;
 }
 
 /* contact us intersection observer */
@@ -817,7 +817,7 @@ button:focus {
 }
 
 .delayThree:nth-child(2) {
-    transition-delay: 400ms;
+    transition-delay: 300ms;
 }
 
 
