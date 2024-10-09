@@ -1,12 +1,12 @@
 import React, { Fragment, lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
+import BlogsData from '../assets/json/BlogSchema';
 const Blog = lazy(() => import('../components/Blog'));
 const ImageComponent = lazy(() => import('../components/ImageComponent'));
 
 
-const Blogs = () => {
 
-    const divs = 6;
+const Blogs = () => {
 
     return (
         <Fragment>
@@ -22,9 +22,15 @@ const Blogs = () => {
 
             <div className='page flexcol'>
                 <div className="blogrid">
-                    {Array.from({ length: divs }).map((_, index) => (
-                        <Blog key={index} />
-                    ))}
+                    <Suspense fallback={<p>Loading...</p>}>
+                        {BlogsData && BlogsData.length > 0 ? (
+                            BlogsData.map((blog, index) => (
+                                <Blog key={index} blogHeading={blog.blogHeading} blogImg={blog.blogImg} blogText={blog.blogText} blogDate={blog.blogDate} />
+                            ))
+                        ) : (
+                            <p className="text">No blogs available</p>
+                        )}
+                    </Suspense>
                 </div>
             </div>
         </Fragment>

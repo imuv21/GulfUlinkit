@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef, Fragment, lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
-import { useLottie } from "lottie-react";
 import TuneIcon from '@mui/icons-material/Tune';
 import CodeIcon from '@mui/icons-material/Code';
 import HubIcon from '@mui/icons-material/Hub';
@@ -12,12 +11,14 @@ import PublicIcon from '@mui/icons-material/Public';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
+
 import marketing from '../assets/json/Animation - 1728293126339.json';
 import web from '../assets/json/Animation - 1728292563720.json';
 import branding from '../assets/json/Animation - 1728292482653.json';
 import seo from '../assets/json/Animation - 1728292246397.json';
 import design from '../assets/json/Animation - 1728289160574.json';
 import app from '../assets/json/Animation - 1728287947892.json';
+import BlogsData from '../assets/json/BlogSchema';
 
 const Animation = lazy(() => import('../components/Animation'));
 const Coverflow = lazy(() => import('../components/Coverflow/Coverflow'));
@@ -35,7 +36,6 @@ const Home = () => {
   const duration = 2000;
   const numberRef = useRef(null);
 
-  const divs = 3;
   const navigate = useNavigate();
 
   const contactUs = () => {
@@ -109,7 +109,6 @@ const Home = () => {
       <div className='page flexcol'>
 
         <section className="secOne">
-
           <article className="hiOneRev delayOne subsecOne" ref={(el) => (hiOneRef.current[0] = el)}>
             <div className="flexcol start-center wh">
               <p className='heading'>WE ARE A CREATIVE AGENCY</p>
@@ -208,8 +207,8 @@ const Home = () => {
         </section>
 
         <iframe className="youtube" src="https://www.youtube.com/embed/Yc_GmHnGw14?si=j8wym0AallhS76Xa" title="YouTube video player"
-          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" loading="lazy" sandbox="allow-scripts allow-same-origin" allowfullscreen>
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin" loading="lazy" sandbox="allow-scripts allow-same-origin" allowFullScreen>
         </iframe>
 
         <div className='counting' ref={numberRef}>
@@ -259,9 +258,15 @@ const Home = () => {
         </article>
 
         <div className="blogrid">
-          {Array.from({ length: divs }).map((_, index) => (
-            <Blog key={index} />
-          ))}
+          <Suspense fallback={<p>Loading...</p>}>
+            {BlogsData && BlogsData.length > 0 ? (
+              BlogsData.slice(0, 3).map((blog, index) => (
+                <Blog key={index} blogHeading={blog.blogHeading} blogImg={blog.blogImg} blogText={blog.blogText} blogDate={blog.blogDate} />
+              ))
+            ) : (
+              <p className="text">No blogs available</p>
+            )}
+          </Suspense>
         </div>
 
         <Suspense fallback={<p>Loading...</p>}>
