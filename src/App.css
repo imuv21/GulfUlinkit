@@ -990,12 +990,19 @@ button:focus {
 .perfect-grid article {
     width: 100%;
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 30px;
-    gap: 20px;
+    gap: 10px;
     border: 2px inset var(--codeFive);
+}
+
+.perfectgridarticleanimation{
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    aspect-ratio: 4/3;
 }
 
 .youtube {
@@ -2152,6 +2159,15 @@ button:focus {
 }
 
 @media only screen and (max-width: 550px) {
+
+    .perfect-grid {
+        width: 100%;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        overflow: hidden;
+    }
+  
 
     .hire-grid {
         width: 100%;

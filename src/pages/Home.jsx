@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, Fragment, lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
+import { useLottie } from "lottie-react";
 import TuneIcon from '@mui/icons-material/Tune';
 import CodeIcon from '@mui/icons-material/Code';
 import HubIcon from '@mui/icons-material/Hub';
@@ -11,8 +12,14 @@ import PublicIcon from '@mui/icons-material/Public';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
+import marketing from '../assets/json/Animation - 1728293126339.json';
+import web from '../assets/json/Animation - 1728292563720.json';
+import branding from '../assets/json/Animation - 1728292482653.json';
+import seo from '../assets/json/Animation - 1728292246397.json';
+import design from '../assets/json/Animation - 1728289160574.json';
+import app from '../assets/json/Animation - 1728287947892.json';
 
-
+const Animation = lazy(() => import('../components/Animation'));
 const Coverflow = lazy(() => import('../components/Coverflow/Coverflow'));
 const Gallery = lazy(() => import('../components/Gallery'));
 const ImageSlider = lazy(() => import('../components/ImageSlider'));
@@ -113,7 +120,7 @@ const Home = () => {
               At Gulf Ulinkit, creativity isn’t just a part of our process; it’s at the core of who we are. We are a creative agency where imagination meets innovation. If you can think it, we can make it happen. With a team of visionary designers, developers, and strategists, we turn ideas into reality, crafting digital experiences that leave a lasting impression.
               Our approach is collaborative and forward-thinking. We believe that every challenge presents an opportunity for creativity, and every idea has the potential to be groundbreaking.
             </h2>
-            
+
             <h2 className='text'>
               We work closely with our clients, embracing their vision while pushing the boundaries of what’s possible to create something truly unique and impactful.
               From stunning web designs that captivate users to digital marketing campaigns that resonate and engage, Gulf Ulinkit is dedicated to excellence in all we do. Our mission is to help your business stand out in the digital landscape, combining aesthetic appeal with functional design to achieve your goals.
@@ -158,32 +165,44 @@ const Home = () => {
         <section className='perfect-grid'>
           <article className="hiTwoRev delayTwo" ref={(el) => (hiTwoRef.current[0] = el)}>
             <h1 className='heading'>Designing</h1>
-            <img src="https://img.icons8.com/?size=50&id=3LU4sgfdp2Kp&format=png&color=000000" alt="Designing" />
-            <h2 className='headingSmol'>Digital Products UX Design And Development</h2>
+            <Suspense fallback={<p>Loading...</p>}>
+              <Animation animationData={design} />
+            </Suspense>
+            <h2 className='headingSmol'>Digital Products UX Design</h2>
           </article>
           <article className="hiTwoRev delayTwo" ref={(el) => (hiTwoRef.current[1] = el)}>
             <h1 className='heading'>Website Development</h1>
-            <img src="https://img.icons8.com/?size=50&id=b7SpNjqNHg9H&format=png&color=000000" alt="Website Development" />
-            <h2 className='headingSmol'>Website Creation</h2>
+            <Suspense fallback={<p>Loading...</p>}>
+              <Animation animationData={web} />
+            </Suspense>
+            <h2 className='headingSmol'>Website development</h2>
           </article>
           <article className="hiTwoRev delayTwo" ref={(el) => (hiTwoRef.current[2] = el)}>
             <h1 className='heading'>Mobile App Development</h1>
-            <img src="https://img.icons8.com/?size=50&id=ARYeNCV6at2F&format=png&color=000000" alt="Mobile App Development" />
-            <h2 className='headingSmol'>Android IOS Hybrid</h2>
+            <Suspense fallback={<p>Loading...</p>}>
+              <Animation animationData={app} />
+            </Suspense>
+            <h2 className='headingSmol'>Android & IOS development</h2>
           </article>
           <article className="hiTwo delayTwo" ref={(el) => (hiTwoRef.current[3] = el)}>
             <h1 className='heading'>SEO</h1>
-            <img src="https://img.icons8.com/?size=50&id=13555&format=png&color=000000" alt="SEO" />
+            <Suspense fallback={<p>Loading...</p>}>
+              <Animation animationData={seo} />
+            </Suspense>
             <h2 className='headingSmol'>Marketing Strategy & CEO Campaigns</h2>
           </article>
           <article className="hiTwo delayTwo" ref={(el) => (hiTwoRef.current[4] = el)}>
             <h1 className='heading'>Branding</h1>
-            <img src="https://img.icons8.com/?size=50&id=SBSBqsIbuBpa&format=png&color=000000" alt="Branding" />
+            <Suspense fallback={<p>Loading...</p>}>
+              <Animation animationData={branding} />
+            </Suspense>
             <h2 className='headingSmol'>Discover Explore & Understanding</h2>
           </article>
           <article className="hiTwo delayTwo" ref={(el) => (hiTwoRef.current[5] = el)}>
             <h1 className='heading'>Digital Marketing</h1>
-            <img src="https://img.icons8.com/?size=50&id=Zc1kZ3IwI9aZ&format=png&color=000000" alt="Digital Marketing" />
+            <Suspense fallback={<p>Loading...</p>}>
+              <Animation animationData={marketing} />
+            </Suspense>
             <h2 className='headingSmol'>Art Direction & Brand Communication</h2>
           </article>
         </section>
