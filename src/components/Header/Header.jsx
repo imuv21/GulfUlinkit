@@ -65,7 +65,7 @@ const Header = () => {
               <span className="burger-line"></span>
               <span className="burger-line"></span>
             </div>
-            <a href="/" className="brand">Ulinkit<span style={{ color: 'green' }}></span></a>
+            <a href="/" className="brand"><img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1728473670/GulfUlinkit/logo2_keirx0_bkpfxz.png" alt="Ulinkit" /></a>
           </div>
 
           <div className="menu" id="menu">
