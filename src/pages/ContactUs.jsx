@@ -95,7 +95,7 @@ const ContactUs = () => {
               <WhatsAppIcon />
               <div>
                 <h1 className="headingSmol">Connect on WhatsApp</h1>
-                <p className='textBig'>+91 87505 18844</p>
+                <p className='textBig'>+971 55 840 8932</p>
               </div>
             </article>
             <article>

@@ -83,7 +83,7 @@ const Footer = () => {
                 </div>
                 <div className='footer-contact'>
                   <MdEmail className='icons-contact' />
-                  <p className='para2'>Email: <span className='lovercase'>info@gmail.com</span></p>
+                  <p className='para2'>Email: <span className='lovercase'>info@ulinkit.com</span></p>
                 </div>
                 {/*  dubai address */}
               </div>
@@ -99,7 +99,7 @@ const Footer = () => {
                 </div>
                 <div className='footer-contact'>
                   <MdEmail className='icons-contact' />
-                  <p className='para2'>Email: <span className='lovercase'>info@gmail.com</span></p>
+                  <p className='para2'>Email: <span className='lovercase'>info@ulinkit.com</span></p>
                 </div>
                 {/*  dubai address */}
               </div>

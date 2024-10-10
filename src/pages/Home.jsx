@@ -206,7 +206,7 @@ const Home = () => {
           </article>
         </section>
 
-        <iframe className="youtube" src="https://www.youtube.com/embed/Yc_GmHnGw14?si=j8wym0AallhS76Xa" title="YouTube video player"
+        <iframe className="youtube" src="https://www.youtube.com/embed/AQD9tWTifJ4?si=pjQXxMInqBN3JZSR" title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin" loading="lazy" sandbox="allow-scripts allow-same-origin" allowFullScreen>
         </iframe>
