@@ -63,7 +63,7 @@ const Footer = () => {
                 </div>
                 <div className='footer-contact'>
                   <MdEmail className='icons-contact' />
-                  <p className='para2'>Email: <span className='lovercase'>dhiraj@ulinkitus.com</span></p>
+                  <p className='para2'>Email: <span className='lovercase'>dhiraj@ulinkit.com</span></p>
                 </div>
                 {/*  dubai address */}
               </div>
