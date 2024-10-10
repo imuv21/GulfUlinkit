@@ -2030,6 +2030,38 @@ button:focus {
 }
 
 @media (max-width: 840px) {
+
+    .slider,
+    .slider>div {
+        height: 70vh;
+    }
+
+    .titleBar {
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: transparent;
+        position: absolute;
+        width: 100%;
+        top: 20%;
+        left: 0%;
+        padding: 20px 15px;
+        gap: 10px;
+    }
+
+    .titleBar h1 {
+        color: var(--codeThree);
+        font-size: 25px;
+    }
+
+    .titleBar p {
+        color: var(--codeThree);
+        font-size: 14px;
+    }
+
+
     .youtube {
         width: 100%;
         height: 390px;
@@ -2281,37 +2313,6 @@ button:focus {
     .subsecOne .heading {
         text-align: center;
         width: 100%;
-    }
-
-
-    .slider,
-    .slider>div {
-        height: 70vh;
-    }
-
-    .titleBar {
-        z-index: 2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        background: transparent;
-        position: absolute;
-        width: 100%;
-        top: 20%;
-        left: 0%;
-        padding: 20px 15px;
-        gap: 10px;
-    }
-
-    .titleBar h1 {
-        color: var(--codeThree);
-        font-size: 25px;
-    }
-
-    .titleBar p {
-        color: var(--codeThree);
-        font-size: 14px;
     }
 
     .textBig {

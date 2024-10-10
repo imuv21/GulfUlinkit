@@ -106,7 +106,6 @@ const ImageSlider = () => {
                         });
 
                         function changeCarousel(position) {
-                            console.log("New Position:", position);
                             $slider.find(".show").removeClass("show").fadeOut();
                             $slider.find("> div").eq(position).fadeIn(set.fadeSpeed).addClass("show");
                             $slider.find("> ul > li.showli").removeClass("showli");
