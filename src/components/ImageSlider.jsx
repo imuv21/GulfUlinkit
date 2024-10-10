@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useRef } from 'react';
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
@@ -7,6 +7,14 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 const ImageSlider = () => {
 
+    const content = [
+        { title1: 'Build or Scale Up Your', title2: 'Business With Us', description: 'If You Can Think It, We Can Make It' },
+        { title1: 'Discover Innovative Solutions', title2: 'Tailored For You', description: 'Let Us Help You Grow' },
+        { title1: 'SEO Made Easy', title2: 'Boost Your Online Presence', description: 'Reach More Customers with Ease' },
+        { title1: 'Mobile App Development', title2: 'Bring Your Ideas to Life', description: 'Creating Seamless Experiences' },
+        { title1: 'Expert Web Development', title2: 'Powering The Digital World', description: 'We Build, You Thrive' },
+    ];
+    const [activeSlideIndex, setActiveSlideIndex] = useState(0);
     const slider1Ref = useRef(null);
     const navigate = useNavigate();
     const blogs = () => {
@@ -20,7 +28,7 @@ const ImageSlider = () => {
                     $.fn.sliderResponsive = function (settings) {
                         var set = $.extend(
                             {
-                                slidePause: 5000,
+                                slidePause: 8000,
                                 fadeSpeed: 800,
                                 autoPlay: "on",
                                 showArrows: "off",
@@ -103,6 +111,7 @@ const ImageSlider = () => {
                             $slider.find("> div").eq(position).fadeIn(set.fadeSpeed).addClass("show");
                             $slider.find("> ul > li.showli").removeClass("showli");
                             $slider.find("> ul > li").eq(position).addClass("showli");
+                            setActiveSlideIndex(position); 
                         }
 
                         return $slider;
@@ -145,11 +154,11 @@ const ImageSlider = () => {
                     <KeyboardArrowRightIcon />
                 </i>
 
-                <span class="titleBar">
-                   <h1>Build or Scale Up Your</h1>
-                   <h1>Business With Us</h1>
-                   <p>If You Can Think It, We Can Make It</p>
-                   <button onClick={blogs}>Discover More</button>
+                <span className="titleBar">
+                    <h1>{content[activeSlideIndex].title1}</h1>
+                    <h1>{content[activeSlideIndex].title2}</h1>
+                    <p>{content[activeSlideIndex].description}</p>
+                    <button onClick={blogs}>Discover More</button>
                 </span>
             </div>
         </Fragment>
