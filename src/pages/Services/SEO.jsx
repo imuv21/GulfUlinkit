@@ -13,7 +13,7 @@ const SEO = () => {
             <Helmet>
                 <title>SEO | Get in Touch with Us</title>
                 <meta name="description" content="Reach out to Gulf Ulinkit for any queries or support. We're here to assist you with your questions about our services and platform." />
-                <link rel="canonical" href="https://www.ulinkit.com/seo" />
+                <link rel="canonical" href="https://ulinkgulf.com/seo" />
             </Helmet>
 
             <Suspense fallback={<p>Loading...</p>}>

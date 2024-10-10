@@ -99,7 +99,7 @@ const Home = () => {
       <Helmet>
         <title>Gulf Ulinkit | Home Page</title>
         <meta name="description" content=""></meta>
-        <link rel="canonical" href="https://ulinkit.netlify.app/" />
+        <link rel="canonical" href="https://ulinkgulf.com/" />
       </Helmet>
 
       <Suspense fallback={<p>Loading...</p>}>

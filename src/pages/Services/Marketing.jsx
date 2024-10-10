@@ -13,7 +13,7 @@ const Marketing = () => {
             <Helmet>
                 <title>Digital Marketing | Get in Touch with Us</title>
                 <meta name="description" content="Reach out to Gulf Ulinkit for any queries or support. We're here to assist you with your questions about our services and platform." />
-                <link rel="canonical" href="https://www.ulinkit.com/digital-marketing" />
+                <link rel="canonical" href="https://ulinkgulf.com/digital-marketing" />
             </Helmet>
 
             <Suspense fallback={<p>Loading...</p>}>

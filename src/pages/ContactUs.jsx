@@ -77,7 +77,7 @@ const ContactUs = () => {
       <Helmet>
         <title>Gulf Ulinkit | Get in Touch with Us</title>
         <meta name="description" content="Reach out to Gulf Ulinkit for any queries or support. We're here to assist you with your questions about our services and platform." />
-        <link rel="canonical" href="https://www.ulinkit.com/contact-us" />
+        <link rel="canonical" href="https://ulinkgulf.com/contact-us" />
       </Helmet>
 
       <Suspense fallback={<p>Loading...</p>}>

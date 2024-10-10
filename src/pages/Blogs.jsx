@@ -13,7 +13,7 @@ const Blogs = () => {
             <Helmet>
                 <title>Gulf Ulinkit | Blog</title>
                 <meta name="description" content="Stay updated with the latest insights, trends, and news from Gulf Ulinkit. Explore our blog for expert articles and valuable resources." />
-                <link rel="canonical" href="https://www.ulinkit.com/blogs" />
+                <link rel="canonical" href="https://ulinkgulf.com/blogs" />
             </Helmet>
 
             <Suspense fallback={<p>Loading...</p>}>

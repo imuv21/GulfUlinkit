@@ -11,7 +11,7 @@ const Portfolio = () => {
             <Helmet>
                 <title>Gulf Ulinkit | Our Portfolio</title>
                 <meta name="description" content="Explore the Gulf Ulinkit portfolio, showcasing our innovative projects, solutions, and success stories across various industries." />
-                <link rel="canonical" href="https://www.ulinkit.com/portfolio" />
+                <link rel="canonical" href="https://ulinkgulf.com/portfolio" />
             </Helmet>
 
             <Suspense fallback={<p>Loading...</p>}>

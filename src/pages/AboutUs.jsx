@@ -61,12 +61,13 @@ const AboutUs = () => {
       })
     }
   }, [])
+  
   return (
     <Fragment>
       <Helmet>
         <title>Gulf Ulinkit | AboutUs Page</title>
         <meta name="description" content=""></meta>
-        <link rel="canonical" href="" />
+        <link rel="canonical" href="https://ulinkgulf.com/about-us" />
       </Helmet>
       <div className='about'>
       <Suspense fallback={<p>Loading...</p>}>
