@@ -54,7 +54,7 @@ const Footer = () => {
                 <div className='footer-contact'>
                   <MdPhone className='icons-contact' />
                   <p className='para2'>Phone:</p>
-                  <p>+918750518844 </p>
+                  <p>+91 8750518844 </p>
                 </div>
                 <div className='footer-contact'>
                   <GrLocation className='icons-contact' />
@@ -71,7 +71,7 @@ const Footer = () => {
                 <p className='para3'>Dubai-</p>
                 <div className='footer-contact'>
                   <MdPhone className='icons-contact' />
-                  <p className='para2'>Phone: <span>+966 570690925</span></p>
+                  <p className='para2'>Phone: <span>+971 570690925</span></p>
                 </div>
                 <div className='footer-contact'>
                   <img src={Watshapp} className='icons-contact  whatsapp-icon' />
@@ -91,7 +91,7 @@ const Footer = () => {
                 <p className='para3'>Saudi</p>
                 <div className='footer-contact'>
                   <MdPhone className='icons-contact' />
-                  <p className='para2'>Phone: <span>+96 6570690925</span></p>
+                  <p className='para2'>Phone: <span>+966 570690925</span></p>
                 </div>
                 <div className='footer-contact'>
                   <GrLocation className='icons-contact' />
