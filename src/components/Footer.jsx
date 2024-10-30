@@ -85,23 +85,6 @@ const Footer = () => {
                   <MdEmail className='icons-contact' />
                   <p className='para2'>Email: <span className='lovercase'>info@ulinkit.com</span></p>
                 </div>
-                {/*  dubai address */}
-              </div>
-              <div className='some-content'>
-                <p className='para3'>Saudi</p>
-                <div className='footer-contact'>
-                  <MdPhone className='icons-contact' />
-                  <p className='para2'>Phone: <span>+966 570690925</span></p>
-                </div>
-                <div className='footer-contact'>
-                  <GrLocation className='icons-contact' />
-                  <p className='para2'>Address: <span>B.No 8158 <br />Imam Al shafi Road Ar rayan Riyadh</span></p>
-                </div>
-                <div className='footer-contact'>
-                  <MdEmail className='icons-contact' />
-                  <p className='para2'>Email: <span className='lovercase'>info@ulinkit.com</span></p>
-                </div>
-                {/*  dubai address */}
               </div>
             </div>
             <div className='footer-contact'>
