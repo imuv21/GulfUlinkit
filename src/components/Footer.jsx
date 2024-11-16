@@ -17,7 +17,7 @@ const Footer = () => {
       <div className='footer'>
         <div className='footer-flex'>
           <div className='footer-container-1'>
-            <h2 className='heading  footer-heading'>Why Us</h2>
+            <hw2 className='heading  footer-heading'>Why Us</hw2>
             <div className='some-content'>
               <a href="#" className="brand" style={{ filter: 'none' }}>Ulinkit</a>
               <p className=' para1'>At Gulf Ulinkit, creativity isn’t just a part of our process; it’s at the core of who we are. We are a creative agency where imagination meets innovation. If you can think it, we can make it happen.</p>
@@ -26,13 +26,12 @@ const Footer = () => {
           <div className='footer-container-2'>
             <h2 className='heading  footer-heading'>Our Services</h2>
             <div className='some-content'>
-              <div className='footer-services'>Web Developement</div>
-              <div className='footer-services'>Desigining</div>
-              <div className='footer-services'>Mobile Developement</div>
-              <div className='footer-services'> SEO</div>
-              <div className='footer-services'>Branding</div>
-              <div className='footer-services'>Digital Marketing</div>
-              <div className='footer-services'>AWS Services</div>
+              <Link to ='/web-development' className='footer-services'>Web Developement</Link>
+              <Link to ='/designing' className='footer-services'>Desigining</Link>
+              <Link to ='/app-development' className='footer-services'>Mobile Developement</Link>
+              <Link to ='/seo' className='footer-services'> SEO</Link>
+              <Link to ='/branding' className='footer-services'>Branding</Link>
+              <Link to ='/digital-marketing'   className='footer-services'>Digital Marketing</Link>
             </div>
           </div>
           <div className='footer-container-2'>
